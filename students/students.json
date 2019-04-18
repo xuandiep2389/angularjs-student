@@ -1,0 +1,33 @@
+[
+  {
+    "name": "phuc",
+    "age": 24,
+    "address": "Ha noi",
+    "gender": "male",
+    "phoneNum": "0123456788"
+  },
+  {
+    "name": "Binh",
+    "age": 23,
+    "address": "Hai duong",
+    "gender": "male"
+  },
+  {
+    "name": "Quynh",
+    "age": 28,
+    "address": "Hai phong",
+    "gender": "female"
+  },
+  {
+    "name": "An",
+    "age": 20,
+    "address": "Sai gon",
+    "gender": "female"
+  },
+  {
+    "name": "Hoang",
+    "age": 14,
+    "address": "Hai duong",
+    "gender": "male"
+  }
+]
