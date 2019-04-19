@@ -13,5 +13,5 @@
 }
 
 .table-body:nth-child(2n) {
-    background-color: #e7fff6
+    background-color: lightblue;
 }
