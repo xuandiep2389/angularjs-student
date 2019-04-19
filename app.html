@@ -18,151 +18,180 @@
 
     <script src="lib/angular/angular.js"></script>
 
-    <link href="app.css">
+    <link rel="stylesheet" href="app.css">
 </head>
 <body>
-<div class="row">
 
-    <div ng-controller="chartCtrl" class="col-md-5 left-content">
-        <div class="draw-chart" id="myDChart"></div>
-    </div>
+<div class="container">
 
-
-    <div ng-controller="listStudentCtrl" class="col-md-7 right-content">
+    <div ng-controller="chartCtrl" class="row">
 
 
-        <!--<nav class="navbar navbar-expand-lg">-->
+        <div class="col-md-4" ng-show="showGraph">
+            <div>
+                <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
+                    Visualization
+                    <button class="far fa-minus-square" ng-click="toggleShowGraph()"></button>
+                </div>
 
-            <!--<div id="navbarNavDropdown" class="navbar-collapse collapse">-->
-                <!--<ul class="navbar-nav mr-auto">-->
-                    <!--<li class="nav-item">-->
-                        <!--Student List-->
-                    <!--</li>-->
+                <div class="draw-chart" id="myDChart">
 
-                <!--</ul>-->
+                </div>
 
-                <!--<ul class="navbar-nav">-->
-                    <!--<li class="nav-item dropdown">-->
-                        <!--<a class="fa fa-ellipsis-v" id="navbarDropdownMenuLink" data-toggle="dropdown"-->
-                           <!--aria-haspopup="true"-->
-                           <!--aria-expanded="false">-->
-                        <!--</a>-->
-                        <!--<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">-->
-                            <!--<a data-toggle="modal" data-target="#myModal">Table configuration</a>-->
-                            <!--<a onclick="exportTableToExcel('myTable','students-data')">Export</a>-->
-                        <!--</div>-->
-                    <!--</li>-->
-                <!--</ul>-->
-            <!--</div>-->
-        <!--</nav>-->
+            </div>
+        </div>
 
-        <!--&lt;!&ndash; The Modal &ndash;&gt;-->
-        <!--<div class="modal" id="myModal">-->
-            <!--<div class="modal-dialog">-->
-                <!--<div class="modal-content">-->
+        <div class="col-1" ng-show="!showGraph">
 
-                    <!--&lt;!&ndash; Modal Header &ndash;&gt;-->
-                    <!--<div class="modal-header">-->
-                        <!--<h4 class="modal-title">Displayed columns</h4>-->
-                        <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
-                    <!--</div>-->
+            <div>
+                <button class="far fa-plus-square" ng-click="toggleShowGraph()">
 
-                    <!--&lt;!&ndash; Modal body &ndash;&gt;-->
-                    <!--<div class="modal-body">-->
-                        <!--<div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">-->
-                            <!--<input type="checkbox" ng-model="checkAll" ng-change="check()">All-->
-                        <!--</div>-->
-                        <!--<div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">-->
-                            <!--<input type="checkbox" ng-model="name">Name-->
-                        <!--</div>-->
-                        <!--<div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">-->
-                            <!--<input type="checkbox" ng-model="age">Age-->
-                        <!--</div>-->
-                        <!--<div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">-->
-                            <!--<input type="checkbox" ng-model="gender">Gender-->
-                        <!--</div>-->
-                        <!--<div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">-->
-                            <!--<input type="checkbox" ng-model="address">Address-->
-                        <!--</div>-->
-                        <!--<div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">-->
-                            <!--<input type="checkbox" ng-model="phoneNum">Phone number-->
-                        <!--</div>-->
-                    <!--</div>-->
+                </button>
+            </div>
 
-                    <!--&lt;!&ndash; Modal footer &ndash;&gt;-->
-                    <!--<div class="modal-footer">-->
-                        <!--<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>-->
-                    <!--</div>-->
-
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
+            <div id="vertical-para">
+                <p id="para">CHART</p>
+            </div>
+        </div>
 
 
-        <table class="table" id="myTable">
-
-            <tr class="table-header">
-                <td ng-if="name">Name
-                    <a ng-click="sort('name')" class="fas fa-sort"></a>
-                </td>
-                <td ng-if="age">Age
-                    <a ng-click="sort('age')" class="fas fa-sort"></a>
-                </td>
-                <td ng-if="gender">Gender
-                    <a ng-click="sort('gender')" class="fas fa-sort"></a>
-                </td>
-                <td ng-if="address">Address
-                    <a ng-click="sort('address')" class="fas fa-sort"></a>
-                </td>
-                <td ng-if="phoneNum">Phone Number
-                    <a ng-click="sort('phoneNum')" class="fas fa-sort"></a>
-                </td>
-            </tr>
+        <div ng-controller="listStudentCtrl" class="col-md right-content">
 
 
-            <tr class="table-body" ng-repeat="student in students | orderBy:sortType:sortRevert">
-                <td ng-if="name">{{student.name}}</td>
-                <td ng-if="age">{{student.age}}</td>
-                <td ng-if="gender">{{student.gender}}</td>
-                <td ng-if="address">{{student.address}}</td>
-                <td ng-if="phoneNum">{{student.phoneNum}}</td>
-            </tr>
+            <nav class="navbar navbar-expand-lg">
 
-        </table>
+                <div id="navbarNavDropdown" class="navbar-collapse collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            Student List
+                        </li>
+
+                    </ul>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="fa fa-ellipsis-v" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                               aria-haspopup="true"
+                               aria-expanded="false">
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a data-toggle="modal" data-target="#myModal">Table configuration</a>
+                                <a onclick="exportTableToExcel('myTable','students-data')">Export</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Displayed columns</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
+                                <input type="checkbox" ng-model="checkAll" ng-change="check()">All
+                            </div>
+                            <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
+                                <input type="checkbox" ng-model="name">Name
+                            </div>
+                            <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
+                                <input type="checkbox" ng-model="age">Age
+                            </div>
+                            <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
+                                <input type="checkbox" ng-model="gender">Gender
+                            </div>
+                            <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
+                                <input type="checkbox" ng-model="address">Address
+                            </div>
+                            <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
+                                <input type="checkbox" ng-model="phoneNum">Phone number
+                            </div>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
 
-        <!--<script>-->
-            <!--function exportTableToExcel(tableID, filename = '') {-->
-                <!--var downloadLink;-->
-                <!--var dataType = 'application/vnd.ms-excel';-->
-                <!--var tableSelect = document.getElementById(tableID);-->
-                <!--var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');-->
+            <table class="table" id="myTable">
 
-                <!--// Specify file name-->
-                <!--filename = filename ? filename + '.xls' : 'excel_data.xls';-->
+                <tr class="table-header">
+                    <td ng-if="name">Name
+                        <a ng-click="sort('name')" class="fas fa-sort"></a>
+                    </td>
+                    <td ng-if="age">Age
+                        <a ng-click="sort('age')" class="fas fa-sort"></a>
+                    </td>
+                    <td ng-if="gender">Gender
+                        <a ng-click="sort('gender')" class="fas fa-sort"></a>
+                    </td>
+                    <td ng-if="address">Address
+                        <a ng-click="sort('address')" class="fas fa-sort"></a>
+                    </td>
+                    <td ng-if="phoneNum">Phone Number
+                        <a ng-click="sort('phoneNum')" class="fas fa-sort"></a>
+                    </td>
+                </tr>
 
-                <!--// Create download link element-->
-                <!--downloadLink = document.createElement("a");-->
 
-                <!--document.body.appendChild(downloadLink);-->
+                <tr class="table-body" ng-repeat="student in students | orderBy:sortType:sortRevert">
+                    <td ng-if="name">{{student.name}}</td>
+                    <td ng-if="age">{{student.age}}</td>
+                    <td ng-if="gender">{{student.gender}}</td>
+                    <td ng-if="address">{{student.address}}</td>
+                    <td ng-if="phoneNum">{{student.phoneNum}}</td>
+                </tr>
 
-                <!--if (navigator.msSaveOrOpenBlob) {-->
-                    <!--var blob = new Blob(['\ufeff', tableHTML], {-->
-                        <!--type: dataType-->
-                    <!--});-->
-                    <!--navigator.msSaveOrOpenBlob(blob, filename);-->
-                <!--} else {-->
-                    <!--// Create a link to the file-->
-                    <!--downloadLink.href = 'data:' + dataType + ', ' + tableHTML;-->
+            </table>
 
-                    <!--// Setting the file name-->
-                    <!--downloadLink.download = filename;-->
 
-                    <!--//triggering the function-->
-                    <!--downloadLink.click();-->
-                <!--}-->
-            <!--}-->
-        <!--</script>-->
+            <script>
+                function exportTableToExcel(tableID, filename = '') {
+                    var downloadLink;
+                    var dataType = 'application/vnd.ms-excel';
+                    var tableSelect = document.getElementById(tableID);
+                    var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+
+                    // Specify file name
+                    filename = filename ? filename + '.xls' : 'excel_data.xls';
+
+                    // Create download link element
+                    downloadLink = document.createElement("a");
+
+                    document.body.appendChild(downloadLink);
+
+                    if (navigator.msSaveOrOpenBlob) {
+                        var blob = new Blob(['\ufeff', tableHTML], {
+                            type: dataType
+                        });
+                        navigator.msSaveOrOpenBlob(blob, filename);
+                    } else {
+                        // Create a link to the file
+                        downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+
+                        // Setting the file name
+                        downloadLink.download = filename;
+
+                        //triggering the function
+                        downloadLink.click();
+                    }
+                }
+            </script>
+        </div>
+
     </div>
 
 </div>

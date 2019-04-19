@@ -1,6 +1,7 @@
 var myApp = angular.module('myApp',[]);
 
 myApp.controller('chartCtrl', ['$scope','$http', function ContactController($scope) {
+
     $scope.showGraph = true;
 
     $scope.toggleShowGraph = function () {
