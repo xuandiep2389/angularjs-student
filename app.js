@@ -50,9 +50,6 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
 
 
 
-
-
-
     // calculate data and draw chart
     $scope.calculateData = function(){
 
