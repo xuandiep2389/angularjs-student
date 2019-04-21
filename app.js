@@ -19,8 +19,41 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
 
     
 
-    
+    // toggle filter on table
+    $scope.showFilterName = true;
+    $scope.toggleFilterName = function(){
+       $scope.showFilterName = !$scope.showFilterName;
+    };
 
+    $scope.showFilterAge = true;
+    $scope.toggleFilterAge = function(){
+        $scope.showFilterAge = !$scope.showFilterAge;
+    };
+
+    $scope.showFilterGender = true;
+    $scope.toggleFilterGender = function(){
+        $scope.showFilterGender = !$scope.showFilterGender;
+    };
+
+    $scope.showFilterAddress = true;
+    $scope.toggleFilterAddress = function(){
+        $scope.showFilterAddress = !$scope.showFilterAddress;
+    };
+
+    $scope.showFilterPhoneNum = true;
+    $scope.toggleFilterPhoneNum = function(){
+        $scope.showFilterPhoneNum = !$scope.showFilterPhoneNum;
+    };
+
+
+
+
+
+
+
+
+
+    // calculate data and draw chart
     $scope.calculateData = function(){
 
         $http.get('students/students.json').then(function (response) {
@@ -77,7 +110,7 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
 
             $scope.drawChart($scope.chartData);
     });
-    }
+    };
 
     $scope.name = true;
     $scope.age = true;
