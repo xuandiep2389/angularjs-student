@@ -136,10 +136,12 @@
                     <div ng-show="!showFilterName">
 
                         <input type="text" ng-model="nameFilter.name">
-
-                        <div ng-repeat="student in students | filter: nameFilter">
-                            {{student.name}}
+                        <div id="filterName">
+                            <div ng-repeat="student in students | filter: nameFilter">
+                                {{student.name}}
+                            </div>
                         </div>
+
                     </div>
                 </td>
 
@@ -152,12 +154,14 @@
                     <div ng-show="!showFilterAge">
 
                         <input type="text" ng-model="ageFilter.age">
-
-                        <div ng-repeat="student in ctrl.filteredAge = (students | filter: ageFilter)">
-                            {{student.age}}
+                        <div id="filterAge">
+                            <div ng-repeat="student in ctrl.filteredAge = (students | filter: ageFilter)">
+                                {{student.age}}
+                            </div>
                         </div>
                     </div>
                 </td>
+
                 <td ng-if="gender">Gender
                     <a ng-click="sort('gender')" class="fas fa-sort"></a>
 
@@ -167,11 +171,14 @@
 
                         <input type="text" ng-model="genderFilter.gender">
 
-                        <div ng-repeat="student in students | filter: genderFilter">
-                            {{student.gender}}
+                        <div id="filterGender">
+                            <div ng-repeat="student in students | filter: genderFilter">
+                                {{student.gender}}
+                            </div>
                         </div>
                     </div>
                 </td>
+
                 <td ng-if="address">Address
                     <a ng-click="sort('address')" class="fas fa-sort"></a>
 
@@ -181,8 +188,10 @@
 
                         <input type="text" ng-model="addressFilter.address">
 
-                        <div ng-repeat="student in students | filter: addressFilter">
-                            {{student.address}}
+                        <div id="filterAddress">
+                            <div ng-repeat="student in students | filter: addressFilter">
+                                {{student.address}}
+                            </div>
                         </div>
                     </div>
                 </td>
@@ -195,9 +204,12 @@
 
                         <input type="text" ng-model="phoneFilter.phoneNum">
 
-                        <div ng-repeat="student in students | filter: phoneFilter">
-                            {{student.phoneNum}}
+                        <div id="filterPhone">
+                            <div ng-repeat="student in students | filter: phoneFilter">
+                                {{student.phoneNum}}
+                            </div>
                         </div>
+
                     </div>
                 </td>
             </tr>
