@@ -133,15 +133,17 @@
                     <a ng-click="toggleFilterName()" class="fas fa-filter"></a>
 
 
-                    <div ng-show="!showFilterName">
+                    <div id="showFilterName" ng-show="!showFilterName">
 
-                        <input type="text" ng-model="nameFilter.name">
+                        <input id="inputNameFilter" type="text" ng-model="nameFilter.name">
                         <div id="filterName">
+
                             <div ng-repeat="student in students | filter: nameFilter">
                                 {{student.name}}
                             </div>
-                        </div>
 
+                        </div>
+                        <button>Ok</button>
                     </div>
                 </td>
 
@@ -151,7 +153,7 @@
 
                     <a ng-click="toggleFilterAge()" class="fas fa-filter"></a>
 
-                    <div ng-show="!showFilterAge">
+                    <div id="showFilterAge" ng-show="!showFilterAge">
 
                         <input type="text" ng-model="ageFilter.age">
                         <div id="filterAge">
@@ -159,6 +161,7 @@
                                 {{student.age}}
                             </div>
                         </div>
+                        <button>Ok</button>
                     </div>
                 </td>
 
@@ -167,7 +170,7 @@
 
                     <a ng-click="toggleFilterGender()" class="fas fa-filter"></a>
 
-                    <div ng-show="!showFilterGender">
+                    <div id="showFilterGender"ng-show="!showFilterGender">
 
                         <input type="text" ng-model="genderFilter.gender">
 
@@ -176,6 +179,7 @@
                                 {{student.gender}}
                             </div>
                         </div>
+                        <button>Ok</button>
                     </div>
                 </td>
 
@@ -184,7 +188,7 @@
 
                     <a ng-click="toggleFilterAddress()" class="fas fa-filter"></a>
 
-                    <div ng-show="!showFilterAddress">
+                    <div id="showFilterAddress"ng-show="!showFilterAddress">
 
                         <input type="text" ng-model="addressFilter.address">
 
@@ -193,6 +197,7 @@
                                 {{student.address}}
                             </div>
                         </div>
+                        <button>Ok</button>
                     </div>
                 </td>
                 <td ng-if="phoneNum">Phone Number
@@ -200,7 +205,7 @@
 
                     <a ng-click="toggleFilterPhoneNum()" class="fas fa-filter"></a>
 
-                    <div ng-show="!showFilterPhoneNum">
+                    <div id="showFilterPhone" ng-show="!showFilterPhoneNum">
 
                         <input type="text" ng-model="phoneFilter.phoneNum">
 
@@ -209,6 +214,7 @@
                                 {{student.phoneNum}}
                             </div>
                         </div>
+                        <button>Ok</button>
 
                     </div>
                 </td>

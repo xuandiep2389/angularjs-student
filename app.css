@@ -17,7 +17,15 @@
 }
 
 #filterName, #filterAge, #filterGender, #filterAddress, #filterPhone {
-    height: 100px;
-    width: 80%;
+    max-height: 100px;
     overflow-y: auto;
+}
+
+#showFilterName, #showFilterAge, #showFilterAddress, #showFilterGender, #showFilterPhone {
+    position: absolute;
+    background-color: white;
+}
+
+#inputNameFilter {
+
 }
