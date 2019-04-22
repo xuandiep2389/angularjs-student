@@ -46,10 +46,6 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
     };
 
 
-
-
-
-
     // calculate data and draw chart
     $scope.calculateData = function(){
 
@@ -88,26 +84,29 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
         }
 
         haiduongPer = Math.round((haiduongCount / $scope.students.length) * 100);
-        console.log(haiduongPer);
+        // console.log(haiduongPer);
         haiphongPer = Math.round((haiphongCount / $scope.students.length) * 100);
-        console.log(haiphongPer);
+        // console.log(haiphongPer);
         hanoiPer = Math.round((hanoiCount / $scope.students.length) * 100);
-        console.log(hanoiPer);
+        // console.log(hanoiPer);
         saigonPer = Math.round((saigonCount / $scope.students.length) * 100);
-        console.log(saigonPer);
+        // console.log(saigonPer);
         provincePer.push(haiduongPer);
         provincePer.push(haiphongPer);
         provincePer.push(hanoiPer);
         provincePer.push(saigonPer);
-        console.log(provincePer);
+        // console.log(provincePer);
 
         for (let j = 0; j < province.length; j++) {
             $scope.chartData.push([province[j], provincePer[j]])
         }
 
             $scope.drawChart($scope.chartData);
+        console.log($scope.nameFilter)
     });
     };
+
+
 
     $scope.name = true;
     $scope.age = true;
@@ -226,5 +225,6 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
     };
 
     $scope.init();
+
 }]);
 
