@@ -55,32 +55,41 @@
 
 
     <div class="col-md right-content">
-
-
-        <nav class="navbar navbar-expand-lg">
-
-            <div id="navbarNavDropdown" class="navbar-collapse collapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        Student List
-                    </li>
-
-                </ul>
-
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="fa fa-ellipsis-v" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                           aria-haspopup="true"
-                           aria-expanded="false">
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a data-toggle="modal" data-target="#myModal">Table configuration</a>
-                            <a onclick="exportTableToExcel('myTable','students-data')">Export</a>
-                        </div>
-                    </li>
-                </ul>
+        <div class="navbar">
+            <div class="nav-item">
+                Student List
             </div>
-        </nav>
+            <div class="nav-item">
+                <div class="dropdown" style="float:right;">
+                    <button class="fa fa-ellipsis-v"></button>
+                    <div class="dropdown-content">
+                        <a data-toggle="modal" data-target="#myModal">Table configuration</a>
+                        <a onclick="exportTableToExcel('myTable','students-data')">Export</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<nav class="navbar">-->
+
+            <!--<div "class="navbar-collapse collapse>-->
+                <!--<div class="nav-item">-->
+                    <!--Student List-->
+                <!--</div>-->
+
+                <!--<div class="nav-item">-->
+                    <!--<li class="nav-item dropdown">-->
+                        <!--<a class="fa fa-ellipsis-v" id="navbarDropdownMenuLink" data-toggle="dropdown"-->
+                           <!--aria-haspopup="true"-->
+                           <!--aria-expanded="false">-->
+                        <!--</a>-->
+                        <!--<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->
+                            <!--<a data-toggle="modal" data-target="#myModal">Table configuration</a>-->
+                            <!--<a onclick="exportTableToExcel('myTable','students-data')">Export</a>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</nav>-->
 
         <!-- The Modal -->
         <div class="modal" id="myModal">
