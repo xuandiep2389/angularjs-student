@@ -138,12 +138,12 @@
                         <input id="inputNameFilter" type="text" ng-model="nameFilter.name">
                         <div id="filterName">
 
-                            <div ng-repeat="student in students | filter: nameFilter">
+                            <div ng-repeat="student in filteredName = (students | filter: nameFilter)">
                                 {{student.name}}
                             </div>
 
                         </div>
-                        <button>Ok</button>
+                        <button ng-click="changeStudentsDataName(filteredName)">Ok</button>
                     </div>
                 </td>
 
@@ -157,11 +157,11 @@
 
                         <input type="text" ng-model="ageFilter.age">
                         <div id="filterAge">
-                            <div ng-repeat="student in ctrl.filteredAge = (students | filter: ageFilter)">
+                            <div ng-repeat="student in filteredAge = (students | filter: ageFilter)">
                                 {{student.age}}
                             </div>
                         </div>
-                        <button>Ok</button>
+                        <button ng-click="changeStudentsDataAge(filteredAge)">Ok</button>
                     </div>
                 </td>
 
@@ -175,11 +175,11 @@
                         <input type="text" ng-model="genderFilter.gender">
 
                         <div id="filterGender">
-                            <div ng-repeat="student in students | filter: genderFilter">
+                            <div ng-repeat="student in filteredGender = (students | filter: genderFilter)">
                                 {{student.gender}}
                             </div>
                         </div>
-                        <button>Ok</button>
+                        <button ng-click="changeStudentsDataGender(filteredGender)">Ok</button>
                     </div>
                 </td>
 
@@ -193,11 +193,11 @@
                         <input type="text" ng-model="addressFilter.address">
 
                         <div id="filterAddress">
-                            <div ng-repeat="student in students | filter: addressFilter">
+                            <div ng-repeat="student in filteredAddress = (students | filter: addressFilter)">
                                 {{student.address}}
                             </div>
                         </div>
-                        <button>Ok</button>
+                        <button ng-click="changeStudentsDataAddress(filteredAddress)">Ok</button>
                     </div>
                 </td>
                 <td ng-if="phoneNum">Phone Number
@@ -210,18 +210,17 @@
                         <input type="text" ng-model="phoneFilter.phoneNum">
 
                         <div id="filterPhone">
-                            <div ng-repeat="student in students | filter: phoneFilter">
+                            <div ng-repeat="student in filteredPhoneNum = (students | filter: phoneFilter)">
                                 {{student.phoneNum}}
                             </div>
                         </div>
-                        <button>Ok</button>
-
+                        <button ng-click="changeStudentsDataPhone(filteredPhoneNum)">Ok</button>
                     </div>
                 </td>
             </tr>
 
 
-            <tr class="table-body" ng-repeat="student in students | orderBy:sortType:sortRevert">
+            <tr class="table-body" ng-repeat="student in studentsData | orderBy:sortType:sortRevert">
                 <td ng-if="name">{{student.name}}</td>
                 <td ng-if="age">{{student.age}}</td>
                 <td ng-if="gender">{{student.gender}}</td>

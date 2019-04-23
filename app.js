@@ -102,7 +102,7 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
         }
 
             $scope.drawChart($scope.chartData);
-        console.log($scope.nameFilter)
+            $scope.studentsData = $scope.students;
     });
     };
 
@@ -225,6 +225,34 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
     };
 
     $scope.init();
+
+
+    // change table data when click `ok`
+    $scope.changeStudentsDataName = function (data) {
+        $scope.studentsData = data;
+        $scope.toggleFilterName();
+    }
+
+    $scope.changeStudentsDataAge = function (data) {
+        $scope.studentsData = data;
+        $scope.toggleFilterAge();
+    }
+
+    $scope.changeStudentsDataGender = function (data) {
+        $scope.studentsData = data;
+        $scope.toggleFilterGender();
+    }
+
+    $scope.changeStudentsDataAddress = function (data) {
+        $scope.studentsData = data;
+        $scope.toggleFilterAddress();
+    }
+
+    $scope.changeStudentsDataPhone = function (data) {
+        $scope.studentsData = data;
+        $scope.toggleFilterPhoneNum();
+    }
+
 
 }]);
 
