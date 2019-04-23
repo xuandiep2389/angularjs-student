@@ -27,22 +27,20 @@
 
 
     <div class="col-md-4" ng-show="showGraph">
-        <div>
-            <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
+        <div class="navbar">
+            <div class="nav-item" style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
                 Visualization
-                <button class="far fa-minus-square" ng-click="toggleShowGraph()"></button>
             </div>
-
-            <div class="draw-chart" id="myDChart">
-
-            </div>
+            <button class="nav-item far fa-minus-square" ng-click="toggleShowGraph()"></button>
+        </div>
+        <div class="draw-chart" id="myDChart">
 
         </div>
     </div>
 
     <div class="col-1" ng-show="!showGraph">
 
-        <div>
+        <div align="center">
             <button class="far fa-plus-square" ng-click="toggleShowGraph()">
 
             </button>
@@ -69,27 +67,6 @@
                 </div>
             </div>
         </div>
-        <!--<nav class="navbar">-->
-
-            <!--<div "class="navbar-collapse collapse>-->
-                <!--<div class="nav-item">-->
-                    <!--Student List-->
-                <!--</div>-->
-
-                <!--<div class="nav-item">-->
-                    <!--<li class="nav-item dropdown">-->
-                        <!--<a class="fa fa-ellipsis-v" id="navbarDropdownMenuLink" data-toggle="dropdown"-->
-                           <!--aria-haspopup="true"-->
-                           <!--aria-expanded="false">-->
-                        <!--</a>-->
-                        <!--<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->
-                            <!--<a data-toggle="modal" data-target="#myModal">Table configuration</a>-->
-                            <!--<a onclick="exportTableToExcel('myTable','students-data')">Export</a>-->
-                        <!--</div>-->
-                    <!--</li>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</nav>-->
 
         <!-- The Modal -->
         <div class="modal" id="myModal">
@@ -152,7 +129,10 @@
                             </div>
 
                         </div>
-                        <button ng-click="changeStudentsDataName(filteredName)">Ok</button>
+                        <div align="center">
+                            <button class="filterOk" ng-click="changeStudentsDataName(filteredName)">OK</button>
+                        </div>
+
                     </div>
                 </td>
 
@@ -170,7 +150,10 @@
                                 {{student.age}}
                             </div>
                         </div>
-                        <button ng-click="changeStudentsDataAge(filteredAge)">Ok</button>
+                        <div align="center">
+                            <button class="filterOk" ng-click="changeStudentsDataAge(filteredAge)">OK</button>
+                        </div>
+
                     </div>
                 </td>
 
@@ -188,7 +171,9 @@
                                 {{student.gender}}
                             </div>
                         </div>
-                        <button ng-click="changeStudentsDataGender(filteredGender)">Ok</button>
+                        <div align="center">
+                            <button class="filterOk" ng-click="changeStudentsDataGender(filteredGender)">OK</button>
+                        </div>
                     </div>
                 </td>
 
@@ -206,7 +191,9 @@
                                 {{student.address}}
                             </div>
                         </div>
-                        <button ng-click="changeStudentsDataAddress(filteredAddress)">Ok</button>
+                        <div align="center">
+                            <button class="filterOk" ng-click="changeStudentsDataAddress(filteredAddress)">OK</button>
+                        </div>
                     </div>
                 </td>
                 <td ng-if="phoneNum">Phone Number
@@ -223,7 +210,9 @@
                                 {{student.phoneNum}}
                             </div>
                         </div>
-                        <button ng-click="changeStudentsDataPhone(filteredPhoneNum)">Ok</button>
+                        <div align="center">
+                            <button class="filterOk" ng-click="changeStudentsDataPhone(filteredPhoneNum)">OK</button>
+                        </div>
                     </div>
                 </td>
             </tr>
