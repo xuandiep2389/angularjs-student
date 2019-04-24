@@ -86,3 +86,24 @@
     /*.dropdown:hover .dropbtn {*/
         /*background-color: #3e8e41;*/
     /*}*/
+
+
+#rightCont {
+    border-top: 2px solid gray;
+    border-right: 2px solid gray;
+    --padding: 20px;
+    padding: var(--padding);
+    box-shadow: inset 0 0 0 var(--padding) #e5e5e5;
+}
+
+#leftCont {
+    border-left: 2px solid gray;
+    border-right: 2px solid gray;
+    border-top: 2px solid gray;
+}
+
+#smallLeftCont {
+    border-left: 2px solid gray;
+    border-right: 2px solid gray;
+    border-top: 2px solid gray;
+}
