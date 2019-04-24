@@ -23,258 +23,259 @@
 <body>
 
 
-<div ng-controller="chartCtrl as ctrl" class="row">
+    <div ng-controller="chartCtrl as ctrl" class="row">
 
 
-    <div id="leftCont" class="col-md-3" ng-show="showGraph">
-        <div style="border-bottom: 1px solid #D9D9D9" class="navbar">
-            <div class="nav-item" style="font-size: 20px">
-                Visualization
+        <div id="leftCont" class="col-md-3" ng-show="showGraph">
+            <div style="border-bottom: 1px solid #D9D9D9" class="navbar">
+                <div class="nav-item" style="font-size: 20px">
+                    Visualization
+                </div>
+                <a class="far fa-minus-square" ng-click="toggleShowGraph()"></a>
             </div>
-            <a class="far fa-minus-square" ng-click="toggleShowGraph()"></a>
-        </div>
-        <div class="draw-chart" id="myDChart">
+            <div class="draw-chart" id="myDChart">
 
-        </div>
-    </div>
-
-    <div id="smallLeftCont" class="col-1" ng-show="!showGraph" style="max-width: 5%">
-
-        <div align="center">
-            <a class="far fa-plus-square" ng-click="toggleShowGraph()">
-
-            </a>
+            </div>
         </div>
 
-        <div id="vertical-para">
-            <p id="para">CHART</p>
-        </div>
-    </div>
+        <div id="smallLeftCont" class="col-1" ng-show="!showGraph" style="max-width: 5%">
 
+            <div align="center">
+                <a class="far fa-plus-square" ng-click="toggleShowGraph()">
 
-    <div id="rightCont" class="col-md right-content">
-        <div>
-
-            <div class="navbar">
-                <div class="nav-item">
-                    Student List
-                </div>
-                <div class="nav-item">
-                    <div class="dropdown" style="float:right;">
-                        <a class="fa fa-ellipsis-v"></a>
-                        <div class="dropdown-content">
-                            <a data-toggle="modal" data-target="#myModal">Table configuration</a>
-                            <a onclick="exportTableToExcel('myTable','students-data')">Export</a>
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
 
-            <!-- The Modal -->
-            <div class="modal" id="myModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                            <h4 class="modal-title">Displayed columns</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-
-                        <!-- Modal body -->
-                        <div class="modal-body">
-                            <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
-                                <input type="checkbox" ng-model="checkAll" ng-change="check()">All
-                            </div>
-                            <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
-                                <input type="checkbox" ng-model="name">Name
-                            </div>
-                            <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
-                                <input type="checkbox" ng-model="age">Age
-                            </div>
-                            <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
-                                <input type="checkbox" ng-model="gender">Gender
-                            </div>
-                            <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
-                                <input type="checkbox" ng-model="address">Address
-                            </div>
-                            <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
-                                <input type="checkbox" ng-model="phoneNum">Phone number
-                            </div>
-                        </div>
-
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                        </div>
-
-                    </div>
-                </div>
+            <div id="vertical-para">
+                <p id="para">CHART</p>
             </div>
+        </div>
 
+
+        <div id="rightCont" class="col-md right-content">
             <div>
 
-                <table class="table" id="myTable">
+                <div class="navbar">
+                    <div class="nav-item">
+                        Student List
+                    </div>
+                    <div class="nav-item">
+                        <div class="dropdown" style="float:right;">
+                            <a class="fa fa-ellipsis-v"></a>
+                            <div class="dropdown-content">
+                                <a data-toggle="modal" data-target="#myModal">Table configuration</a>
+                                <a onclick="exportTableToExcel('myTable','students-data')">Export</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                    <tr class="table-header">
-                        <td ng-if="name">Name
-                            <a ng-click="sort('name')" class="fas fa-sort"></a>
-                            <a ng-click="toggleFilterName()" class="fas fa-filter"></a>
+                <!-- The Modal -->
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Displayed columns</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
+                                    <input type="checkbox" ng-model="checkAll" ng-change="check()">All
+                                </div>
+                                <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
+                                    <input type="checkbox" ng-model="name">Name
+                                </div>
+                                <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
+                                    <input type="checkbox" ng-model="age">Age
+                                </div>
+                                <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
+                                    <input type="checkbox" ng-model="gender">Gender
+                                </div>
+                                <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
+                                    <input type="checkbox" ng-model="address">Address
+                                </div>
+                                <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
+                                    <input type="checkbox" ng-model="phoneNum">Phone number
+                                </div>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+
+                    <table class="table" id="myTable">
+
+                        <tr class="table-header">
+                            <td ng-if="name">Name
+                                <a ng-click="sort('name')" class="fas fa-sort"></a>
+                                <a ng-click="toggleFilterName()" class="fas fa-filter"></a>
 
 
-                            <div id="showFilterName" ng-show="!showFilterName">
+                                <div id="showFilterName" ng-show="!showFilterName">
 
-                                <input id="inputNameFilter" type="text" ng-model="nameFilter.name">
-                                <div id="filterName">
+                                    <input id="inputNameFilter" type="text" ng-model="nameFilter.name">
+                                    <div id="filterName">
 
-                                    <div ng-repeat="student in filteredName = (students | filter: nameFilter)">
-                                        {{student.name}}
+                                        <div ng-repeat="student in filteredName = (students | filter: nameFilter)">
+                                            {{student.name}}
+                                        </div>
+
+                                    </div>
+                                    <div align="center">
+                                        <button class="filterOk" ng-click="changeStudentsDataName(filteredName)">OK</button>
                                     </div>
 
                                 </div>
-                                <div align="center">
-                                    <button class="filterOk" ng-click="changeStudentsDataName(filteredName)">OK</button>
+                            </td>
+
+
+                            <td ng-if="age">Age
+                                <a ng-click="sort('age')" class="fas fa-sort"></a>
+
+                                <a ng-click="toggleFilterAge()" class="fas fa-filter"></a>
+
+                                <div id="showFilterAge" ng-show="!showFilterAge">
+
+                                    <input type="text" ng-model="ageFilter.age">
+                                    <div id="filterAge">
+                                        <div ng-repeat="student in filteredAge = (students | filter: ageFilter)">
+                                            {{student.age}}
+                                        </div>
+                                    </div>
+                                    <div align="center">
+                                        <button class="filterOk" ng-click="changeStudentsDataAge(filteredAge)">OK</button>
+                                    </div>
+
                                 </div>
+                            </td>
 
-                            </div>
-                        </td>
+                            <td ng-if="gender">Gender
+                                <a ng-click="sort('gender')" class="fas fa-sort"></a>
 
+                                <a ng-click="toggleFilterGender()" class="fas fa-filter"></a>
 
-                        <td ng-if="age">Age
-                            <a ng-click="sort('age')" class="fas fa-sort"></a>
+                                <div id="showFilterGender"ng-show="!showFilterGender">
 
-                            <a ng-click="toggleFilterAge()" class="fas fa-filter"></a>
+                                    <input type="text" ng-model="genderFilter.gender">
 
-                            <div id="showFilterAge" ng-show="!showFilterAge">
-
-                                <input type="text" ng-model="ageFilter.age">
-                                <div id="filterAge">
-                                    <div ng-repeat="student in filteredAge = (students | filter: ageFilter)">
-                                        {{student.age}}
+                                    <div id="filterGender">
+                                        <div ng-repeat="student in filteredGender = (students | filter: genderFilter)">
+                                            {{student.gender}}
+                                        </div>
+                                    </div>
+                                    <div align="center">
+                                        <button class="filterOk" ng-click="changeStudentsDataGender(filteredGender)">OK</button>
                                     </div>
                                 </div>
-                                <div align="center">
-                                    <button class="filterOk" ng-click="changeStudentsDataAge(filteredAge)">OK</button>
-                                </div>
+                            </td>
 
-                            </div>
-                        </td>
+                            <td ng-if="address">Address
+                                <a ng-click="sort('address')" class="fas fa-sort"></a>
 
-                        <td ng-if="gender">Gender
-                            <a ng-click="sort('gender')" class="fas fa-sort"></a>
+                                <a ng-click="toggleFilterAddress()" class="fas fa-filter"></a>
 
-                            <a ng-click="toggleFilterGender()" class="fas fa-filter"></a>
+                                <div id="showFilterAddress"ng-show="!showFilterAddress">
 
-                            <div id="showFilterGender"ng-show="!showFilterGender">
+                                    <input type="text" ng-model="addressFilter.address">
 
-                                <input type="text" ng-model="genderFilter.gender">
-
-                                <div id="filterGender">
-                                    <div ng-repeat="student in filteredGender = (students | filter: genderFilter)">
-                                        {{student.gender}}
+                                    <div id="filterAddress">
+                                        <div ng-repeat="student in filteredAddress = (students | filter: addressFilter)">
+                                            {{student.address}}
+                                        </div>
+                                    </div>
+                                    <div align="center">
+                                        <button class="filterOk" ng-click="changeStudentsDataAddress(filteredAddress)">OK</button>
                                     </div>
                                 </div>
-                                <div align="center">
-                                    <button class="filterOk" ng-click="changeStudentsDataGender(filteredGender)">OK</button>
-                                </div>
-                            </div>
-                        </td>
+                            </td>
+                            <td ng-if="phoneNum">Phone Number
+                                <a ng-click="sort('phoneNum')" class="fas fa-sort"></a>
 
-                        <td ng-if="address">Address
-                            <a ng-click="sort('address')" class="fas fa-sort"></a>
+                                <a ng-click="toggleFilterPhoneNum()" class="fas fa-filter"></a>
 
-                            <a ng-click="toggleFilterAddress()" class="fas fa-filter"></a>
+                                <div id="showFilterPhone" ng-show="!showFilterPhoneNum">
 
-                            <div id="showFilterAddress"ng-show="!showFilterAddress">
+                                    <input type="text" ng-model="phoneFilter.phoneNum">
 
-                                <input type="text" ng-model="addressFilter.address">
-
-                                <div id="filterAddress">
-                                    <div ng-repeat="student in filteredAddress = (students | filter: addressFilter)">
-                                        {{student.address}}
+                                    <div id="filterPhone">
+                                        <div ng-repeat="student in filteredPhoneNum = (students | filter: phoneFilter)">
+                                            {{student.phoneNum}}
+                                        </div>
+                                    </div>
+                                    <div align="center">
+                                        <button class="filterOk" ng-click="changeStudentsDataPhone(filteredPhoneNum)">OK</button>
                                     </div>
                                 </div>
-                                <div align="center">
-                                    <button class="filterOk" ng-click="changeStudentsDataAddress(filteredAddress)">OK</button>
-                                </div>
-                            </div>
-                        </td>
-                        <td ng-if="phoneNum">Phone Number
-                            <a ng-click="sort('phoneNum')" class="fas fa-sort"></a>
-
-                            <a ng-click="toggleFilterPhoneNum()" class="fas fa-filter"></a>
-
-                            <div id="showFilterPhone" ng-show="!showFilterPhoneNum">
-
-                                <input type="text" ng-model="phoneFilter.phoneNum">
-
-                                <div id="filterPhone">
-                                    <div ng-repeat="student in filteredPhoneNum = (students | filter: phoneFilter)">
-                                        {{student.phoneNum}}
-                                    </div>
-                                </div>
-                                <div align="center">
-                                    <button class="filterOk" ng-click="changeStudentsDataPhone(filteredPhoneNum)">OK</button>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
+                            </td>
+                        </tr>
 
 
-                    <tr class="table-body" ng-repeat="student in studentsData | orderBy:sortType:sortRevert">
-                        <td ng-if="name">{{student.name}}</td>
-                        <td ng-if="age">{{student.age}}</td>
-                        <td ng-if="gender">{{student.gender}}</td>
-                        <td ng-if="address">{{student.address}}</td>
-                        <td ng-if="phoneNum">{{student.phoneNum}}</td>
-                    </tr>
+                        <tr class="table-body" ng-repeat="student in studentsData | orderBy:sortType:sortRevert">
+                            <td ng-if="name">{{student.name}}</td>
+                            <td ng-if="age">{{student.age}}</td>
+                            <td ng-if="gender">{{student.gender}}</td>
+                            <td ng-if="address">{{student.address}}</td>
+                            <td ng-if="phoneNum">{{student.phoneNum}}</td>
+                        </tr>
 
-                </table>
+                    </table>
+
+                </div>
+
 
             </div>
 
-
         </div>
 
-
-
-        <script>
-            function exportTableToExcel(tableID, filename = '') {
-                var downloadLink;
-                var dataType = 'application/vnd.ms-excel';
-                var tableSelect = document.getElementById(tableID);
-                var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
-
-                // Specify file name
-                filename = filename ? filename + '.xls' : 'excel_data.xls';
-
-                // Create download link element
-                downloadLink = document.createElement("a");
-
-                document.body.appendChild(downloadLink);
-
-                if (navigator.msSaveOrOpenBlob) {
-                    var blob = new Blob(['\ufeff', tableHTML], {
-                        type: dataType
-                    });
-                    navigator.msSaveOrOpenBlob(blob, filename);
-                } else {
-                    // Create a link to the file
-                    downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
-
-                    // Setting the file name
-                    downloadLink.download = filename;
-
-                    //triggering the function
-                    downloadLink.click();
-                }
-            }
-        </script>
     </div>
 
-</div>
 
 
 </body>
 </html>
 <script src="app.js"></script>
+
+
+<script>
+    function exportTableToExcel(tableID, filename = '') {
+        var downloadLink;
+        var dataType = 'application/vnd.ms-excel';
+        var tableSelect = document.getElementById(tableID);
+        var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+
+        // Specify file name
+        filename = filename ? filename + '.xls' : 'excel_data.xls';
+
+        // Create download link element
+        downloadLink = document.createElement("a");
+
+        document.body.appendChild(downloadLink);
+
+        if (navigator.msSaveOrOpenBlob) {
+            var blob = new Blob(['\ufeff', tableHTML], {
+                type: dataType
+            });
+            navigator.msSaveOrOpenBlob(blob, filename);
+        } else {
+            // Create a link to the file
+            downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+
+            // Setting the file name
+            downloadLink.download = filename;
+
+            //triggering the function
+            downloadLink.click();
+        }
+    }
+</script>
