@@ -115,3 +115,14 @@
     -webkit-box-shadow: inset 0 0 3px #000000;
     box-shadow:         inset 0 0 3px #000000;
 }
+
+#tableDiv{
+    --padding1: 10px;
+    padding: var(--padding1);
+    box-shadow: inset 0 0 0 var(--padding1) white;
+
+}
+
+.table-header {
+    border-bottom: 2px solid darkslateblue;
+}
