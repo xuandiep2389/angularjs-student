@@ -70,6 +70,7 @@
     z-index: 1;
     width: 200px;
     cursor: pointer;
+    padding: 12px;
 }
 
 .dropdown-content a {
@@ -80,7 +81,7 @@
 }
 
 .dropdown-content a:hover {
-    background-color: cornflowerblue;
+    background-color: #99d9ea;
 }
 
 .dropdown:hover .dropdown-content {
