@@ -77,5 +77,26 @@
     "address": "Hai phong",
     "gender": "female",
     "phoneNum": "01235555"
+  },
+  {
+    "name": "Khanh",
+    "age": 14,
+    "address": "Ha noi",
+    "gender": "female",
+    "phoneNum": "01235445"
+  },
+  {
+    "name": "Toan",
+    "age": 18,
+    "address": "Ha noi",
+    "gender": "male",
+    "phoneNum": "123"
+  },
+  {
+    "name": "Tuan",
+    "age": 18,
+    "address": "Ha noi",
+    "gender": "male",
+    "phoneNum": "0123852"
   }
 ]
