@@ -5,17 +5,22 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
 
     $scope.sortType = 'name'; // set the default sort type
 
-    $scope.sortRevert = false;
+    $scope.sortReverse = false;
 
     $scope.sort = function (keyname) {
-        $scope.sortRevert = !$scope.sortRevert;
+        $scope.sortReverse = !$scope.sortReverse;
         $scope.sortType = keyname;
     };
 
-    // $scope.sortUp = function(keyname) {
-    //     $scope.sortRevert = true;
-    //     $scope.sortType = keyname;
-    // };
+    $scope.sortDown = function (keyname) {
+        $scope.sortReverse = true;
+        $scope.sortType = keyname;
+    };
+
+    $scope.sortUp = function(keyname) {
+        $scope.sortReverse = false;
+        $scope.sortType = keyname;
+    };
 
     
 

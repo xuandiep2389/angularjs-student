@@ -147,12 +147,28 @@
 
 .triangleLeft{
     display: inline-block;
-    margin: 0 5px;
     vertical-align: middle;
-    width: 15px;
-    height: 15px;
-    border-bottom: solid 15px rgb(200,30,50);
-    border-right: solid 15px rgb(200,30,50);
-    border-left: solid 15px transparent;
-    border-top: solid 15px transparent;
+
+    width: 10px;
+    height: 10px;
+    border-bottom: solid 6px #caebfa;
+    border-right: solid 6px #caebfa;
+    border-left: solid 6px transparent;
+    border-top: solid 6px transparent;
+}
+
+.triangleRight{
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 10px;
+    height: 10px;
+    border-bottom: solid 6px transparent ;
+    border-right: solid 6px transparent;
+    border-left: solid 6px #caebfa;
+    border-top: solid 6px #caebfa;
+}
+
+.inline-block{
+    display: inline-block;
 }

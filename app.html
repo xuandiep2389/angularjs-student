@@ -123,9 +123,11 @@
                             <td ng-if="name">
                                 <div>
                                     Name
-                                    <div ng-click="sort('name')" class="triangleLeft cursorPointer"></div>
-                                    <a ng-click="toggleFilterName()" class="fas fa-filter cursorPointer"></a>
 
+                                    <div ng-click="sort('name')" class="triangleLeft cursorPointer"></div>
+                                    <div ng-click="sort('name')" class="triangleRight cursorPointer"></div>
+
+                                    <a ng-click="toggleFilterName()" class="fas fa-filter cursorPointer"></a>
 
                                     <div id="showFilterName" ng-show="!showFilterName">
 
@@ -227,7 +229,7 @@
                         </tr>
 
 
-                        <tr class="table-body" ng-repeat="student in studentsData | orderBy:sortType:sortRevert">
+                        <tr class="table-body" ng-repeat="student in studentsData | orderBy:sortType:sortReverse">
                             <td ng-if="name">{{student.name}}</td>
                             <td ng-if="age">{{student.age}}</td>
                             <td ng-if="gender">{{student.gender}}</td>
