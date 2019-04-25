@@ -41,8 +41,7 @@
     "age": 14,
     "address": "Hai duong",
     "gender": "male"
-  },
-  {
+  },{
     "name": "Hoang",
     "age": 14,
     "address": "Hai duong",
@@ -71,5 +70,12 @@
     "age": 24,
     "address": "Ha noi",
     "gender": "male"
+  },
+  {
+    "name": "Dam",
+    "age": 28,
+    "address": "Hai phong",
+    "gender": "female",
+    "phoneNum": "01235555"
   }
 ]

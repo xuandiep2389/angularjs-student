@@ -31,7 +31,7 @@
                 <div class="nav-item" style="font-size: 20px">
                     Visualization
                 </div>
-                <a class="far fa-minus-square" ng-click="toggleShowGraph()"></a>
+                <a class="far fa-minus-square cursorPointer" ng-click="toggleShowGraph()"></a>
             </div>
             <div class="draw-chart" id="myDChart">
 
@@ -41,7 +41,7 @@
         <div id="smallLeftCont" class="col-1" ng-show="!showGraph" style="max-width: 5%">
 
             <div align="center">
-                <a class="far fa-plus-square" ng-click="toggleShowGraph()">
+                <a class="far fa-plus-square cursorPointer" ng-click="toggleShowGraph()">
 
                 </a>
             </div>
@@ -61,7 +61,7 @@
                     </div>
                     <div class="nav-item">
                         <div class="dropdown" style="float:right;">
-                            <a class="fa fa-ellipsis-v"></a>
+                            <a id="dropdown-menu" class="fa fa-ellipsis-v"></a>
                             <div class="dropdown-content">
                                 <a data-toggle="modal" data-target="#myModal">Table configuration</a>
                                 <a onclick="exportTableToExcel('myTable','students-data')">Export</a>
@@ -118,8 +118,8 @@
 
                         <tr class="table-header">
                             <td ng-if="name">Name
-                                <a ng-click="sort('name')" class="fas fa-sort"></a>
-                                <a ng-click="toggleFilterName()" class="fas fa-filter"></a>
+                                <a ng-click="sort('name')" class="fas fa-sort cursorPointer"></a>
+                                <a ng-click="toggleFilterName()" class="fas fa-filter cursorPointer"></a>
 
 
                                 <div id="showFilterName" ng-show="!showFilterName">
@@ -141,9 +141,9 @@
 
 
                             <td ng-if="age">Age
-                                <a ng-click="sort('age')" class="fas fa-sort"></a>
+                                <a ng-click="sort('age')" class="fas fa-sort cursorPointer"></a>
 
-                                <a ng-click="toggleFilterAge()" class="fas fa-filter"></a>
+                                <a ng-click="toggleFilterAge()" class="fas fa-filter cursorPointer"></a>
 
                                 <div id="showFilterAge" ng-show="!showFilterAge">
 
@@ -161,9 +161,9 @@
                             </td>
 
                             <td ng-if="gender">Gender
-                                <a ng-click="sort('gender')" class="fas fa-sort"></a>
+                                <a ng-click="sort('gender')" class="fas fa-sort cursorPointer"></a>
 
-                                <a ng-click="toggleFilterGender()" class="fas fa-filter"></a>
+                                <a ng-click="toggleFilterGender()" class="fas fa-filter cursorPointer"></a>
 
                                 <div id="showFilterGender"ng-show="!showFilterGender">
 
@@ -181,9 +181,9 @@
                             </td>
 
                             <td ng-if="address">Address
-                                <a ng-click="sort('address')" class="fas fa-sort"></a>
+                                <a ng-click="sort('address')" class="fas fa-sort cursorPointer"></a>
 
-                                <a ng-click="toggleFilterAddress()" class="fas fa-filter"></a>
+                                <a ng-click="toggleFilterAddress()" class="fas fa-filter cursorPointer"></a>
 
                                 <div id="showFilterAddress"ng-show="!showFilterAddress">
 
@@ -200,9 +200,9 @@
                                 </div>
                             </td>
                             <td ng-if="phoneNum">Phone Number
-                                <a ng-click="sort('phoneNum')" class="fas fa-sort"></a>
+                                <a ng-click="sort('phoneNum')" class="fas fa-sort cursorPointer"></a>
 
-                                <a ng-click="toggleFilterPhoneNum()" class="fas fa-filter"></a>
+                                <a ng-click="toggleFilterPhoneNum()" class="fas fa-filter cursorPointer "></a>
 
                                 <div id="showFilterPhone" ng-show="!showFilterPhoneNum">
 
