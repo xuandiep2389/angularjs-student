@@ -120,25 +120,28 @@
                     <table class="table table-borderless" id="myTable">
 
                         <tr class="table-header">
-                            <td ng-if="name">Name
-                                <a ng-click="sort('name')" class="fas fa-sort cursorPointer"></a>
-                                <a ng-click="toggleFilterName()" class="fas fa-filter cursorPointer"></a>
+                            <td ng-if="name">
+                                <div>
+                                    Name
+                                    <div ng-click="sort('name')" class="triangleLeft cursorPointer"></div>
+                                    <a ng-click="toggleFilterName()" class="fas fa-filter cursorPointer"></a>
 
 
-                                <div id="showFilterName" ng-show="!showFilterName">
+                                    <div id="showFilterName" ng-show="!showFilterName">
 
-                                    <input id="inputNameFilter" type="text" ng-model="nameFilter.name">
-                                    <div id="filterName">
+                                        <input id="inputNameFilter" type="text" ng-model="nameFilter.name">
+                                        <div id="filterName">
 
-                                        <div ng-repeat="student in filteredName = (students | filter: nameFilter)">
-                                            {{student.name}}
+                                            <div ng-repeat="student in filteredName = (students | filter: nameFilter)">
+                                                {{student.name}}
+                                            </div>
+
+                                        </div>
+                                        <div align="center">
+                                            <button class="filterOk" ng-click="changeStudentsDataName(filteredName)">OK</button>
                                         </div>
 
                                     </div>
-                                    <div align="center">
-                                        <button class="filterOk" ng-click="changeStudentsDataName(filteredName)">OK</button>
-                                    </div>
-
                                 </div>
                             </td>
 
