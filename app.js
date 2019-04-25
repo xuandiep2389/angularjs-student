@@ -7,10 +7,11 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
 
     $scope.sortReverse = false;
 
-    $scope.sort = function (keyname) {
-        $scope.sortReverse = !$scope.sortReverse;
-        $scope.sortType = keyname;
-    };
+    // $scope.sort = function (keyname) {
+    //     $scope.sortReverse = !$scope.sortReverse;
+    //     $scope.sortType = keyname;
+    //     console.log($scope.sortReverse)
+    // };
 
     $scope.sortDown = function (keyname) {
         $scope.sortReverse = true;

@@ -124,8 +124,8 @@
                                 <div>
                                     Name
 
-                                    <div ng-click="sort('name')" class="triangleLeft cursorPointer"></div>
-                                    <div ng-click="sort('name')" class="triangleRight cursorPointer"></div>
+                                    <a ng-click="sortDown('name')" class="triangleLeft cursorPointer"></a>
+                                    <a ng-click="sortUp('name')" class="triangleRight cursorPointer"></a>
 
                                     <a ng-click="toggleFilterName()" class="fas fa-filter cursorPointer"></a>
 
@@ -149,7 +149,8 @@
 
 
                             <td ng-if="age">Age
-                                <a ng-click="sort('age')" class="fas fa-sort cursorPointer"></a>
+                                <a ng-click="sortDown('age')" class="triangleLeft cursorPointer"></a>
+                                <a ng-click="sortUp('age')" class="triangleRight cursorPointer"></a>
 
                                 <a ng-click="toggleFilterAge()" class="fas fa-filter cursorPointer"></a>
 
@@ -169,7 +170,8 @@
                             </td>
 
                             <td ng-if="gender">Gender
-                                <a ng-click="sort('gender')" class="fas fa-sort cursorPointer"></a>
+                                <a ng-click="sortDown('gender')" class="triangleLeft cursorPointer"></a>
+                                <a ng-click="sortUp('gender')" class="triangleRight cursorPointer"></a>
 
                                 <a ng-click="toggleFilterGender()" class="fas fa-filter cursorPointer"></a>
 
@@ -189,7 +191,8 @@
                             </td>
 
                             <td ng-if="address">Address
-                                <a ng-click="sort('address')" class="fas fa-sort cursorPointer"></a>
+                                <a ng-click="sortDown('address')" class="triangleLeft cursorPointer"></a>
+                                <a ng-click="sortUp('address')" class="triangleRight cursorPointer"></a>
 
                                 <a ng-click="toggleFilterAddress()" class="fas fa-filter cursorPointer"></a>
 
@@ -208,7 +211,8 @@
                                 </div>
                             </td>
                             <td ng-if="phoneNum">Phone Number
-                                <a ng-click="sort('phoneNum')" class="fas fa-sort cursorPointer"></a>
+                                <a ng-click="sortDown('phoneNum')" class="triangleLeft cursorPointer"></a>
+                                <a ng-click="sortUp('phoneNum')" class="triangleRight cursorPointer"></a>
 
                                 <a ng-click="toggleFilterPhoneNum()" class="fas fa-filter cursorPointer "></a>
 
