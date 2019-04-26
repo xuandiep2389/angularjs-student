@@ -172,3 +172,15 @@
 .inline-block{
     display: inline-block;
 }
+
+.mr-auto {
+    margin-right: auto !important;
+}
+
+.sort-filter{
+    position: absolute;
+    display: inline-block;
+    right: 0;
+}
+
+
