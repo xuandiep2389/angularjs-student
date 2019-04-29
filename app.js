@@ -109,6 +109,7 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
 
             $scope.drawChart($scope.chartData);
             $scope.studentsData = $scope.students;
+
     });
     };
 
@@ -120,7 +121,11 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
     $scope.address = false;
     $scope.phoneNum = false;
 
-    $scope.checkAll = true;
+    $scope.getModalStatus = function () {
+
+    };
+
+    $scope.checkAll = false;
 
     $scope.check = function () {
         if ($scope.checkAll) {
@@ -146,9 +151,11 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
             $scope.address = true;
             $scope.phoneNum = true;
         }
+
     };
 
     init();
+
 
     //show hide chart
     $scope.showGraph = true;
@@ -227,6 +234,8 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
 
     $scope.init = function () {
         $scope.calculateData();
+
+
 
     };
 
