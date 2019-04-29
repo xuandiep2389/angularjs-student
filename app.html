@@ -131,7 +131,9 @@
                         <!-- Modal footer -->
                         <div class="modal-footer">
                             <!--<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>-->
-                            <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="getModalStatus()">OK</button>
+                            <button type="button" class="btn btn-success" data-dismiss="modal"
+                                    ng-click="getModalStatus()">OK
+                            </button>
                         </div>
 
                     </div>
@@ -151,23 +153,22 @@
 
                                 <a ng-click="toggleFilterName()" class="fas fa-filter cursorPointer "
                                    style="font-size: 12px; color: #caebfa"></a>
+                            </div>
+                            <div id="showFilterName" ng-show="!showFilterName">
 
-                                <div id="showFilterName" ng-show="!showFilterName">
+                                <input id="inputNameFilter" type="text" ng-model="nameFilter.name">
+                                <div id="filterName">
 
-                                    <input id="inputNameFilter" type="text" ng-model="nameFilter.name">
-                                    <div id="filterName">
-
-                                        <div ng-repeat="student in filteredName = (students | filter: nameFilter)">
-                                            {{student.name}}
-                                        </div>
-
-                                    </div>
-                                    <div align="center">
-                                        <button class="filterOk" ng-click="changeStudentsDataName(filteredName)">OK
-                                        </button>
+                                    <div ng-repeat="student in filteredName = (students | filter: nameFilter)">
+                                        {{student.name}}
                                     </div>
 
                                 </div>
+                                <div align="center">
+                                    <button class="filterOk" ng-click="changeStudentsDataName(filteredName)">OK
+                                    </button>
+                                </div>
+
                             </div>
                         </td>
 
@@ -181,20 +182,20 @@
                                 <a ng-click="toggleFilterAge()" class="fas fa-filter cursorPointer"
                                    style="font-size: 12px; color: #caebfa"></a>
 
-                                <div id="showFilterAge" ng-show="!showFilterAge">
+                            </div>
+                            <div id="showFilterAge" ng-show="!showFilterAge">
 
-                                    <input type="text" ng-model="ageFilter.age">
-                                    <div id="filterAge">
-                                        <div ng-repeat="student in filteredAge = (students | filter: ageFilter)">
-                                            {{student.age}}
-                                        </div>
+                                <input id="inputAgeFilter" type="text" ng-model="ageFilter.age">
+                                <div id="filterAge">
+                                    <div ng-repeat="student in filteredAge = (students | filter: ageFilter)">
+                                        {{student.age}}
                                     </div>
-                                    <div align="center">
-                                        <button class="filterOk" ng-click="changeStudentsDataAge(filteredAge)">OK
-                                        </button>
-                                    </div>
-
                                 </div>
+                                <div align="center">
+                                    <button class="filterOk" ng-click="changeStudentsDataAge(filteredAge)">OK
+                                    </button>
+                                </div>
+
                             </div>
 
                         </td>
@@ -208,20 +209,20 @@
                                 <a ng-click="toggleFilterGender()" class="fas fa-filter cursorPointer"
                                    style="font-size: 12px; color: #caebfa"></a>
 
-                                <div id="showFilterGender" ng-show="!showFilterGender">
+                            </div>
+                            <div id="showFilterGender" ng-show="!showFilterGender">
 
-                                    <input type="text" ng-model="genderFilter.gender">
+                                <input id="inputGenderFilter" type="text" ng-model="genderFilter.gender">
 
-                                    <div id="filterGender">
-                                        <div ng-repeat="student in filteredGender = (students | filter: genderFilter)">
-                                            {{student.gender}}
-                                        </div>
+                                <div id="filterGender">
+                                    <div ng-repeat="student in filteredGender = (students | filter: genderFilter)">
+                                        {{student.gender}}
                                     </div>
-                                    <div align="center">
-                                        <button class="filterOk" ng-click="changeStudentsDataGender(filteredGender)">
-                                            OK
-                                        </button>
-                                    </div>
+                                </div>
+                                <div align="center">
+                                    <button class="filterOk" ng-click="changeStudentsDataGender(filteredGender)">
+                                        OK
+                                    </button>
                                 </div>
                             </div>
 
@@ -237,20 +238,20 @@
                                 <a ng-click="toggleFilterAddress()" class="fas fa-filter cursorPointer"
                                    style="font-size: 12px; color: #caebfa"></a>
 
-                                <div id="showFilterAddress" ng-show="!showFilterAddress">
+                            </div>
+                            <div id="showFilterAddress" ng-show="!showFilterAddress">
 
-                                    <input type="text" ng-model="addressFilter.address">
+                                <input id="inputAddressFilter" type="text" ng-model="addressFilter.address">
 
-                                    <div id="filterAddress">
-                                        <div ng-repeat="student in filteredAddress = (students | filter: addressFilter)">
-                                            {{student.address}}
-                                        </div>
+                                <div id="filterAddress">
+                                    <div ng-repeat="student in filteredAddress = (students | filter: addressFilter)">
+                                        {{student.address}}
                                     </div>
-                                    <div align="center">
-                                        <button class="filterOk" ng-click="changeStudentsDataAddress(filteredAddress)">
-                                            OK
-                                        </button>
-                                    </div>
+                                </div>
+                                <div align="center">
+                                    <button class="filterOk" ng-click="changeStudentsDataAddress(filteredAddress)">
+                                        OK
+                                    </button>
                                 </div>
                             </div>
 
@@ -264,20 +265,20 @@
                                 <a ng-click="toggleFilterPhoneNum()" class="fas fa-filter cursorPointer"
                                    style="font-size: 12px; color: #caebfa"></a>
 
-                                <div id="showFilterPhone" ng-show="!showFilterPhoneNum">
+                            </div>
+                            <div id="showFilterPhone" ng-show="!showFilterPhoneNum">
 
-                                    <input type="text" ng-model="phoneFilter.phoneNum">
+                                <input id="inputPhoneFilter" type="text" ng-model="phoneFilter.phoneNum">
 
-                                    <div id="filterPhone">
-                                        <div ng-repeat="student in filteredPhoneNum = (students | filter: phoneFilter)">
-                                            {{student.phoneNum}}
-                                        </div>
+                                <div id="filterPhone">
+                                    <div ng-repeat="student in filteredPhoneNum = (students | filter: phoneFilter)">
+                                        {{student.phoneNum}}
                                     </div>
-                                    <div align="center">
-                                        <button class="filterOk" ng-click="changeStudentsDataPhone(filteredPhoneNum)">
-                                            OK
-                                        </button>
-                                    </div>
+                                </div>
+                                <div align="center">
+                                    <button class="filterOk" ng-click="changeStudentsDataPhone(filteredPhoneNum)">
+                                        OK
+                                    </button>
                                 </div>
                             </div>
 
