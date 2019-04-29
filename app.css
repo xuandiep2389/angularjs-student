@@ -36,7 +36,7 @@
 }
 
 #inputNameFilter, #inputAgeFilter, #inputGenderFilter, #inputAddressFilter, #inputPhoneFilter {
-    width: 90%;
+    width: 100%;
 }
 
 .filterOk {
