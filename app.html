@@ -64,8 +64,8 @@
                 </div>
                 <div class="nav-item three-dot-menu">
                     <div class="dropdown" style="float:right;">
-                        <a id="dropdown-menu" class="fa fa-ellipsis-v"></a>
-                        <div class="dropdown-content">
+                        <a onclick="btnDropdown()" class="dropbtn fa fa-ellipsis-v cursorPointer"></a>
+                        <div class="dropdown-content" id="myDropdown">
                             <a data-toggle="modal" data-target="#myModal">Table configuration</a>
                             <a onclick="exportTableToExcel('myTable','students-data')">Export</a>
                         </div>
@@ -342,4 +342,25 @@
             downloadLink.click();
         }
     }
+
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+    function btnDropdown() {
+            document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
 </script>
