@@ -121,40 +121,60 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
     $scope.address = false;
     $scope.phoneNum = false;
 
+    $scope.nameModal;
+    $scope.ageModal;
+    $scope.genderModal;
+    $scope.addressModal;
+    $scope.phoneNumModal;
+    $scope.checkAllModal;
+
     $scope.getModalStatus = function () {
+        console.log($scope.nameModal);
 
-    };
-
-    $scope.checkAll = false;
-
-    $scope.check = function () {
-        if ($scope.checkAll) {
-            $scope.name = true;
-            $scope.age = true;
-            $scope.gender = true;
-            $scope.address = true;
-            $scope.phoneNum = true;
-        } else {
-            $scope.name = false;
-            $scope.age = false;
-            $scope.gender = false;
-            $scope.address = false;
-            $scope.phoneNum = false;
-        }
-    };
-
-    var init = function () {
-        if ($scope.checkAll) {
+        $scope.name = $scope.nameModal;
+        $scope.age = $scope.ageModal;
+        $scope.gender = $scope.genderModal;
+        $scope.address =  $scope.addressModal;
+        $scope.phoneNum = $scope.phoneNumModal;
+        if ($scope.checkAllModal) {
             $scope.name = true;
             $scope.age = true;
             $scope.gender = true;
             $scope.address = true;
             $scope.phoneNum = true;
         }
-
     };
 
-    init();
+    // $scope.checkAll = true;
+
+    // $scope.check = function () {
+    //     if ($scope.checkAll) {
+    //         $scope.name = true;
+    //         $scope.age = true;
+    //         $scope.gender = true;
+    //         $scope.address = true;
+    //         $scope.phoneNum = true;
+    //     } else {
+    //         $scope.name = false;
+    //         $scope.age = false;
+    //         $scope.gender = false;
+    //         $scope.address = false;
+    //         $scope.phoneNum = false;
+    //     }
+    // };
+    //
+    // var init = function () {
+    //     if ($scope.checkAll) {
+    //         $scope.name = true;
+    //         $scope.age = true;
+    //         $scope.gender = true;
+    //         $scope.address = true;
+    //         $scope.phoneNum = true;
+    //     }
+    //
+    // };
+    //
+    // init();
 
 
     //show hide chart

@@ -17,7 +17,8 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <script src="lib/angular/angular.js"></script>
-    <script data-require="angular-ui@*" data-semver="0.4.0" src="//rawgithub.com/angular-ui/angular-ui/master/build/angular-ui.js" context="anonymous"></script>
+    <script data-require="angular-ui@*" data-semver="0.4.0"
+            src="//rawgithub.com/angular-ui/angular-ui/master/build/angular-ui.js" context="anonymous"></script>
 
 
     <link rel="stylesheet" href="app.css">
@@ -93,38 +94,38 @@
 
 
                                 <label class="container-checkbox">All
-                                    <input type="checkbox" ng-model="checkAll" ng-change="check()">
+                                    <input type="checkbox" ng-model="checkAllModal">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
                             <br><br>
                             <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
                                 <label class="container-checkbox">Name
-                                    <input type="checkbox" ng-model="name">
+                                    <input type="checkbox" ng-model="nameModal">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
                             <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
                                 <label class="container-checkbox">Age
-                                    <input type="checkbox" ng-model="age">
+                                    <input type="checkbox" ng-model="ageModal">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
                             <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
                                 <label class="container-checkbox">Gender
-                                    <input type="checkbox" ng-model="gender">
+                                    <input type="checkbox" ng-model="genderModal">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
                             <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
                                 <label class="container-checkbox">Address
-                                    <input type="checkbox" ng-model="address">
+                                    <input type="checkbox" ng-model="addressModal">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
                             <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
                                 <label class="container-checkbox">Phone Number
-                                    <input type="checkbox" ng-model="phoneNum">
+                                    <input type="checkbox" ng-model="phoneNumModal">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
@@ -228,8 +229,6 @@
                                     </button>
                                 </div>
                             </div>
-
-
                         </td>
 
                         <td ng-if="address" style="position: relative">
@@ -349,11 +348,11 @@
     /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
     function btnDropdown() {
-            document.getElementById("myDropdown").classList.toggle("show");
+        document.getElementById("myDropdown").classList.toggle("show");
     }
 
     // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         if (!event.target.matches('.dropbtn')) {
             var dropdowns = document.getElementsByClassName("dropdown-content");
             var i;
