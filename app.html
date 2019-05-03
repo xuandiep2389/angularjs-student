@@ -17,6 +17,8 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <script src="lib/angular/angular.js"></script>
+    <script data-require="angular-ui@*" data-semver="0.4.0" src="//rawgithub.com/angular-ui/angular-ui/master/build/angular-ui.js" context="anonymous"></script>
+
 
     <link rel="stylesheet" href="app.css">
 </head>
@@ -159,7 +161,8 @@
                                 <input id="inputNameFilter" type="text" ng-model="nameFilter.name">
                                 <div id="filterName">
 
-                                    <div ng-repeat="student in filteredName = (students | filter: nameFilter)">
+
+                                    <div ng-repeat="student in filteredName = (students | filter: nameFilter) | unique: 'name'">
                                         {{student.name}}
                                     </div>
 
@@ -187,7 +190,7 @@
 
                                 <input id="inputAgeFilter" type="text" ng-model="ageFilter.age">
                                 <div id="filterAge">
-                                    <div ng-repeat="student in filteredAge = (students | filter: ageFilter)">
+                                    <div ng-repeat="student in filteredAge = (students | filter: ageFilter) | unique: 'age'">
                                         {{student.age}}
                                     </div>
                                 </div>
@@ -215,7 +218,7 @@
                                 <input id="inputGenderFilter" type="text" ng-model="genderFilter.gender">
 
                                 <div id="filterGender">
-                                    <div ng-repeat="student in filteredGender = (students | filter: genderFilter)">
+                                    <div ng-repeat="student in filteredGender = (students | filter: genderFilter) | unique: 'gender'">
                                         {{student.gender}}
                                     </div>
                                 </div>
@@ -244,7 +247,7 @@
                                 <input id="inputAddressFilter" type="text" ng-model="addressFilter.address">
 
                                 <div id="filterAddress">
-                                    <div ng-repeat="student in filteredAddress = (students | filter: addressFilter)">
+                                    <div ng-repeat="student in filteredAddress = (students | filter: addressFilter) | unique: 'address'">
                                         {{student.address}}
                                     </div>
                                 </div>
@@ -271,7 +274,7 @@
                                 <input id="inputPhoneFilter" type="text" ng-model="phoneFilter.phoneNum">
 
                                 <div id="filterPhone">
-                                    <div ng-repeat="student in filteredPhoneNum = (students | filter: phoneFilter)">
+                                    <div ng-repeat="student in filteredPhoneNum = (students | filter: phoneFilter) | unique: 'phoneNum'">
                                         {{student.phoneNum}}
                                     </div>
                                 </div>

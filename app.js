@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp',[]);
+var myApp = angular.module('myApp',['ui']);
 
 myApp.controller('chartCtrl', ['$scope','$http', function ContactController($scope, $http) {
 
