@@ -4,6 +4,7 @@
     <title>Student manager</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
@@ -20,6 +21,9 @@
     <script data-require="angular-ui@*" data-semver="0.4.0"
             src="//rawgithub.com/angular-ui/angular-ui/master/build/angular-ui.js" context="anonymous"></script>
 
+    <link rel="stylesheet" href="malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.css">
+    <script src="malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!--<link rel="icon" src="malihu-custom-scrollbar-plugin-master/mCSB_buttons.png">-->
 
     <link rel="stylesheet" href="app.css">
 </head>
@@ -160,10 +164,10 @@
                             <div id="showFilterName" ng-show="!showFilterName">
 
                                 <input id="inputNameFilter" type="text" ng-model="nameFilter.name">
-                                <div id="filterName">
 
+                                <div id="filterName" >
 
-                                    <div ng-repeat="student in filteredName = (students | filter: nameFilter) | unique: 'name'">
+                                    <div  ng-repeat="student in filteredName = (students | filter: nameFilter) | unique: 'name'">
                                         {{student.name}}
                                     </div>
 
@@ -312,7 +316,6 @@
 </html>
 <script src="app.js"></script>
 
-
 <script>
     function exportTableToExcel(tableID, filename = '') {
         var downloadLink;
@@ -363,6 +366,16 @@ toggle between hiding and showing the dropdown content */
                 }
             }
         }
-    }
+    };
+
+
+
+    (function($){
+        $(window).on("load",function(){
+            $("#filterName, #filterAge, #filterAddress, #filterGender, #filterPhone").mCustomScrollbar({
+                theme:"dark-3",
+            });
+        });
+    })(jQuery);
 
 </script>

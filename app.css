@@ -33,6 +33,7 @@ body {
 #filterName, #filterAge, #filterGender, #filterAddress, #filterPhone {
     max-height: 100px;
     overflow-y: auto;
+    padding-left: 10px;
 }
 
 #showFilterName, #showFilterAge, #showFilterAddress, #showFilterGender, #showFilterPhone {
@@ -48,7 +49,7 @@ body {
 }
 
 .filterOk {
-    background-color: green;
+    background-color: #17c076;
     color: white;
     /*padding: 16px;*/
     font-size: 16px;
@@ -300,3 +301,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color: #000;background-color: rgba(0,0,0,0.75);margin-right: 0px;}
+.mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.1); margin-right: 0px }
