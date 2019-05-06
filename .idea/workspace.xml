@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0674f22a-aa7a-4670-9710-4acd60ccf613" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/app.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,20 +20,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5526">
-              <caret line="307" selection-start-line="307" selection-end-line="307" />
+            <state relative-caret-position="259">
+              <caret line="316" selection-start-line="316" selection-end-line="316" />
               <folding>
-                <marker date="1557115765617" expanded="true" signature="1810:1861" ph="..." />
+                <marker date="1557119021678" expanded="true" signature="1832:1883" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1931">
-              <caret line="365" column="17" lean-forward="true" selection-start-line="365" selection-start-column="17" selection-end-line="365" selection-end-column="17" />
+            <state relative-caret-position="535">
+              <caret line="296" column="59" lean-forward="true" selection-start-line="296" selection-start-column="59" selection-end-line="296" selection-end-column="59" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -61,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="153" column="12" selection-start-line="153" selection-start-column="12" selection-end-line="153" selection-end-column="12" />
+            <state relative-caret-position="360">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
             </state>
           </provider>
         </entry>
@@ -94,17 +96,17 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/students/students.json" />
+        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/app.css" />
         <option value="$PROJECT_DIR$/app.html" />
-        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="714" />
-    <option name="y" value="152" />
-    <option name="width" value="930" />
-    <option name="height" value="741" />
+    <option name="x" value="960" />
+    <option name="y" value="27" />
+    <option name="width" value="950" />
+    <option name="height" value="988" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -181,18 +183,19 @@
       <workItem from="1557111589316" duration="1162000" />
       <workItem from="1557112753792" duration="568000" />
       <workItem from="1557113323963" duration="3114000" />
-      <workItem from="1557116442422" duration="309000" />
+      <workItem from="1557116442422" duration="2223000" />
+      <workItem from="1557118667784" duration="465000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85591000" />
+    <option name="totallyTimeSpent" value="87970000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="990" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20706007" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.41897655" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -272,20 +275,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5526">
-          <caret line="307" selection-start-line="307" selection-end-line="307" />
+        <state relative-caret-position="259">
+          <caret line="316" selection-start-line="316" selection-end-line="316" />
           <folding>
-            <marker date="1557115765617" expanded="true" signature="1810:1861" ph="..." />
+            <marker date="1557119021678" expanded="true" signature="1832:1883" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1931">
-          <caret line="365" column="17" lean-forward="true" selection-start-line="365" selection-start-column="17" selection-end-line="365" selection-end-column="17" />
+        <state relative-caret-position="535">
+          <caret line="296" column="59" lean-forward="true" selection-start-line="296" selection-start-column="59" selection-end-line="296" selection-end-column="59" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -311,13 +321,6 @@
             <element signature="n#style#0;n#td#4;n#tr#0;n#table#0;n#div#2;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#2;n#div#0;n#td#4;n#tr#0;n#table#0;n#div#2;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="153" column="12" selection-start-line="153" selection-start-column="12" selection-end-line="153" selection-end-column="12" />
         </state>
       </provider>
     </entry>

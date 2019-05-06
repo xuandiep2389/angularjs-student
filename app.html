@@ -163,7 +163,12 @@
                             </div>
                             <div id="showFilterName" ng-show="!showFilterName">
 
-                                <input id="inputNameFilter" type="text" ng-model="nameFilter.name">
+                                <div class="inputWithIcon">
+                                    <input id="inputNameFilter" type="text" ng-model="nameFilter.name">
+                                    <i class="fas fa-filter"></i>
+                                    <a class="fas fa-times" ng-click="toggleFilterName()"></a>
+                                </div>
+
 
                                 <div id="filterName" >
 
@@ -193,7 +198,12 @@
                             </div>
                             <div id="showFilterAge" ng-show="!showFilterAge">
 
-                                <input id="inputAgeFilter" type="text" ng-model="ageFilter.age">
+                                <div class="inputWithIcon">
+                                    <input id="inputAgeFilter" type="text" ng-model="ageFilter.age">
+                                    <i class="fas fa-filter"></i>
+                                    <a class="fas fa-times" ng-click="toggleFilterAge()"></a>
+                                </div>
+
                                 <div id="filterAge">
                                     <div ng-repeat="student in filteredAge = (students | filter: ageFilter) | unique: 'age'">
                                         {{student.age}}
@@ -220,7 +230,12 @@
                             </div>
                             <div id="showFilterGender" ng-show="!showFilterGender">
 
-                                <input id="inputGenderFilter" type="text" ng-model="genderFilter.gender">
+                                <div class="inputWithIcon">
+                                    <input id="inputGenderFilter" type="text" ng-model="genderFilter.gender">
+                                    <i class="fas fa-filter"></i>
+                                    <a class="fas fa-times" ng-click="toggleFilterGender()"></a>
+                                </div>
+
 
                                 <div id="filterGender">
                                     <div ng-repeat="student in filteredGender = (students | filter: genderFilter) | unique: 'gender'">
@@ -247,7 +262,12 @@
                             </div>
                             <div id="showFilterAddress" ng-show="!showFilterAddress">
 
-                                <input id="inputAddressFilter" type="text" ng-model="addressFilter.address">
+                                <div class="inputWithIcon">
+                                    <input id="inputAddressFilter" type="text" ng-model="addressFilter.address">
+                                    <i class="fas fa-filter"></i>
+                                    <a class="fas fa-times" ng-click="toggleFilterAddress()"></a>
+                                </div>
+
 
                                 <div id="filterAddress">
                                     <div ng-repeat="student in filteredAddress = (students | filter: addressFilter) | unique: 'address'">
@@ -274,7 +294,12 @@
                             </div>
                             <div id="showFilterPhone" ng-show="!showFilterPhoneNum">
 
-                                <input id="inputPhoneFilter" type="text" ng-model="phoneFilter.phoneNum">
+                                <div class="inputWithIcon">
+                                    <input id="inputPhoneFilter" type="text" ng-model="phoneFilter.phoneNum">
+                                    <i class="fas fa-filter"></i>
+                                    <a class="fas fa-times" ng-click="toggleFilterPhoneNum()"></a>
+                                </div>
+
 
                                 <div id="filterPhone">
                                     <div ng-repeat="student in filteredPhoneNum = (students | filter: phoneFilter) | unique: 'phoneNum'">

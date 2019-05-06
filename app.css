@@ -42,6 +42,7 @@ body {
     background-color: #f9f9f9;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    border: 2px gray;
 }
 
 #inputNameFilter, #inputAgeFilter, #inputGenderFilter, #inputAddressFilter, #inputPhoneFilter {
@@ -305,3 +306,35 @@ body {
 
 .mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color: #000;background-color: rgba(0,0,0,0.75);margin-right: 0px;}
 .mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.1); margin-right: 0px }
+
+
+.inputWithIcon input {
+    padding-left: 23px;
+    background-color:  #005f9e;
+    color: white;
+    border: 0px;
+}
+
+.inputWithIcon{
+    position: relative;
+
+}
+.inputWithIcon i {
+    position: absolute;
+    left: 5px;
+    top: 6px;
+    color: white;
+    font-size: 13px;
+}
+
+.inputWithIcon a {
+    position: absolute;
+    right: 8px;
+    top: 6px;
+    cursor: pointer;
+}
+
+input:focus{
+    outline: none;
+}
+
