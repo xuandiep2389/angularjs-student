@@ -118,8 +118,8 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
     $scope.name = true;
     $scope.age = true;
     $scope.gender = true;
-    $scope.address = false;
-    $scope.phoneNum = false;
+    $scope.address = true;
+    $scope.phoneNum = true;
 
     $scope.nameModal;
     $scope.ageModal;
@@ -144,6 +144,16 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
             $scope.phoneNum = true;
         }
     };
+
+    $scope.initCollumn = function(){
+        $scope.nameModal = $scope.name;
+        $scope.ageModal = $scope.age;
+        $scope.genderModal = $scope.gender;
+        $scope.addressModal = $scope.address;
+        $scope.phoneNumModal = $scope.phoneNum;
+    };
+
+    $scope.initCollumn();
 
     // $scope.checkAll = true;
 
