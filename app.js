@@ -151,6 +151,9 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
         $scope.genderModal = $scope.gender;
         $scope.addressModal = $scope.address;
         $scope.phoneNumModal = $scope.phoneNum;
+        if ($scope.nameModal === true && $scope.ageModal===true && $scope.genderModal===true && $scope.addressModal===true && $scope.phoneNumModal===true ) {
+            $scope.checkAllModal = true;
+        }
     };
 
     $scope.initCollumn();
