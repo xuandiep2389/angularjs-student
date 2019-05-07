@@ -302,6 +302,7 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
     };
 
 
+    //get filter result when click on filter
     $scope.getAllStudentByName = function (name) {
         let filter=[];
         for (let i = 0; i < $scope.students.length; i++) {
@@ -362,6 +363,31 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
         $scope.toggleFilterPhoneNum();
     }
 
+    //modal checkbox react
+    $scope.checkAll = function () {
+        if ($scope.checkAllModal) {
+            $scope.nameModal = true;
+            $scope.ageModal = true;
+            $scope.genderModal = true;
+            $scope.addressModal = true;
+            $scope.phoneNumModal = true;
+        }
+        else {
+            $scope.nameModal = false;
+            $scope.ageModal = false;
+            $scope.genderModal = false;
+            $scope.addressModal = false;
+            $scope.phoneNumModal = false;
+        }
+    }
 
+    $scope.checkBoxStatus = function () {
+        if ($scope.nameModal === true && $scope.ageModal===true && $scope.genderModal===true && $scope.addressModal===true && $scope.phoneNumModal===true ) {
+            $scope.checkAllModal = true;
+        }
+        if ($scope.nameModal === false || $scope.ageModal===false || $scope.genderModal===false || $scope.addressModal===false || $scope.phoneNumModal===false) {
+            $scope.checkAllModal = false;
+        }
+    }
 }]);
 
