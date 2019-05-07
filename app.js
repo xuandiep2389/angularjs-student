@@ -299,6 +299,67 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
     $scope.changeStudentsDataPhone = function (data) {
         $scope.studentsData = data;
         $scope.toggleFilterPhoneNum();
+    };
+
+
+    $scope.getAllStudentByName = function (name) {
+        let filter=[];
+        for (let i = 0; i < $scope.students.length; i++) {
+            if (name === $scope.students[i].name) {
+                filter.push($scope.students[i])
+            }
+        }
+        $scope.studentsData = filter;
+        console.log($scope.studentsData);
+        $scope.toggleFilterName();
+    }
+
+    $scope.getAllStudentByAge = function (age) {
+        let filter=[];
+        for (let i = 0; i < $scope.students.length; i++) {
+            if (age === $scope.students[i].age) {
+                filter.push($scope.students[i])
+            }
+        }
+        $scope.studentsData = filter;
+        console.log($scope.studentsData);
+        $scope.toggleFilterAge();
+    }
+
+    $scope.getAllStudentByGender = function (gender) {
+        let filter=[];
+        for (let i = 0; i < $scope.students.length; i++) {
+            if (gender === $scope.students[i].gender) {
+                filter.push($scope.students[i])
+            }
+        }
+        $scope.studentsData = filter;
+        console.log($scope.studentsData);
+        $scope.toggleFilterGender();
+    }
+
+    $scope.getAllStudentByAddress = function (address) {
+        let filter=[];
+        for (let i = 0; i < $scope.students.length; i++) {
+            if (address === $scope.students[i].address) {
+                filter.push($scope.students[i])
+            }
+        }
+        $scope.studentsData = filter;
+        console.log($scope.studentsData);
+        $scope.toggleFilterAddress();
+    }
+
+    $scope.getAllStudentByPhoneNum = function (phone) {
+        let filter=[];
+        for (let i = 0; i < $scope.students.length; i++) {
+            if (phone === $scope.students[i].phoneNum) {
+                filter.push($scope.students[i])
+            }
+        }
+        $scope.studentsData = filter;
+        console.log($scope.studentsData);
+        $scope.toggleFilterPhoneNum();
     }
 
 
