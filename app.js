@@ -24,33 +24,53 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
     };
 
     
+    
 
-    // toggle filter on table
     $scope.showFilterName = true;
-    $scope.toggleFilterName = function(){
-       $scope.showFilterName = !$scope.showFilterName;
-    };
+    // $scope.toggleFilterName = function(){
+    //     $scope.showFilterName = !$scope.showFilterName;
+    // };
 
     $scope.showFilterAge = true;
-    $scope.toggleFilterAge = function(){
-        $scope.showFilterAge = !$scope.showFilterAge;
-    };
+    // $scope.toggleFilterAge = function(){
+    //     $scope.showFilterAge = !$scope.showFilterAge;
+    // };
 
     $scope.showFilterGender = true;
-    $scope.toggleFilterGender = function(){
-        $scope.showFilterGender = !$scope.showFilterGender;
-    };
+    // $scope.toggleFilterGender = function(){
+    //     $scope.showFilterGender = !$scope.showFilterGender;
+    // };
 
     $scope.showFilterAddress = true;
-    $scope.toggleFilterAddress = function(){
-        $scope.showFilterAddress = !$scope.showFilterAddress;
-    };
+    // $scope.toggleFilterAddress = function(){
+    //     $scope.showFilterAddress = !$scope.showFilterAddress;
+    // };
 
     $scope.showFilterPhoneNum = true;
-    $scope.toggleFilterPhoneNum = function(){
-        $scope.showFilterPhoneNum = !$scope.showFilterPhoneNum;
-    };
-
+    // $scope.toggleFilterPhoneNum = function(){
+    //     $scope.showFilterPhoneNum = !$scope.showFilterPhoneNum;
+    // };
+    
+    $scope.toggleFilter = function(args) {
+        switch (args) {
+            case 'name':
+                $scope.showFilterName = !$scope.showFilterName;
+                break;
+            case 'age':
+                $scope.showFilterAge = !$scope.showFilterAge;
+                break;
+            case 'gender':
+                $scope.showFilterGender = !$scope.showFilterGender;
+                break;
+            case 'address':
+                $scope.showFilterAddress = !$scope.showFilterAddress;
+                break;
+            case 'phoneNum':
+                $scope.showFilterPhoneNum = !$scope.showFilterPhoneNum;
+                break;
+        }
+        
+    }
 
     // calculate data and draw chart
     $scope.calculateData = function(){
@@ -129,8 +149,6 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
     $scope.checkAllModal;
 
     $scope.getModalStatus = function () {
-        console.log($scope.nameModal);
-
         $scope.name = $scope.nameModal;
         $scope.age = $scope.ageModal;
         $scope.gender = $scope.genderModal;
@@ -267,9 +285,6 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
 
     $scope.init = function () {
         $scope.calculateData();
-
-
-
     };
 
     $scope.init();
@@ -278,27 +293,27 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
     // change table data when click `ok`
     $scope.changeStudentsDataName = function (data) {
         $scope.studentsData = data;
-        $scope.toggleFilterName();
+        $scope.toggleFilter('name');
     }
 
     $scope.changeStudentsDataAge = function (data) {
         $scope.studentsData = data;
-        $scope.toggleFilterAge();
+        $scope.toggleFilter('age');
     }
 
     $scope.changeStudentsDataGender = function (data) {
         $scope.studentsData = data;
-        $scope.toggleFilterGender();
+        $scope.toggleFilter('gender');
     }
 
     $scope.changeStudentsDataAddress = function (data) {
         $scope.studentsData = data;
-        $scope.toggleFilterAddress();
+        $scope.toggleFilter('address');
     }
 
     $scope.changeStudentsDataPhone = function (data) {
         $scope.studentsData = data;
-        $scope.toggleFilterPhoneNum();
+        $scope.toggleFilter('phoneNum');
     };
 
 
@@ -311,8 +326,8 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
             }
         }
         $scope.studentsData = filter;
-        console.log($scope.studentsData);
-        $scope.toggleFilterName();
+        // console.log($scope.studentsData);
+        $scope.toggleFilter('name');
     }
 
     $scope.getAllStudentByAge = function (age) {
@@ -323,8 +338,8 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
             }
         }
         $scope.studentsData = filter;
-        console.log($scope.studentsData);
-        $scope.toggleFilterAge();
+        // console.log($scope.studentsData);
+        $scope.toggleFilter('age');
     }
 
     $scope.getAllStudentByGender = function (gender) {
@@ -335,8 +350,8 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
             }
         }
         $scope.studentsData = filter;
-        console.log($scope.studentsData);
-        $scope.toggleFilterGender();
+        // console.log($scope.studentsData);
+        $scope.toggleFilter('gender');
     }
 
     $scope.getAllStudentByAddress = function (address) {
@@ -347,8 +362,8 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
             }
         }
         $scope.studentsData = filter;
-        console.log($scope.studentsData);
-        $scope.toggleFilterAddress();
+        // console.log($scope.studentsData);
+        $scope.toggleFilter('address');
     }
 
     $scope.getAllStudentByPhoneNum = function (phone) {
@@ -359,8 +374,8 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
             }
         }
         $scope.studentsData = filter;
-        console.log($scope.studentsData);
-        $scope.toggleFilterPhoneNum();
+        // console.log($scope.studentsData);
+        $scope.toggleFilter('phoneNum');
     }
 
     //modal checkbox react
@@ -389,5 +404,7 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
             $scope.checkAllModal = false;
         }
     }
+
+
 }]);
 

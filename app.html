@@ -105,8 +105,7 @@
                             <br><br>
                             <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
                                 <label class="container-checkbox">Name
-                                    <input ng-ch
-ange="checkBoxStatus()" type="checkbox" ng-model="nameModal">
+                                    <input ng-change="checkBoxStatus()" type="checkbox" ng-model="nameModal">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
@@ -130,7 +129,7 @@ ange="checkBoxStatus()" type="checkbox" ng-model="nameModal">
                             </div>
                             <div style="font-size: 20px; border-bottom: 1px solid #D9D9D9">
                                 <label class="container-checkbox">Phone Number
-                                    <input ng-change="checkBoxStatus()"  type="checkbox" ng-model="phoneNumModal">
+                                    <input ng-change="checkBoxStatus()" type="checkbox" ng-model="phoneNumModal">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
@@ -153,13 +152,16 @@ ange="checkBoxStatus()" type="checkbox" ng-model="nameModal">
                 <table class="table table-borderless" id="myTable">
 
                     <tr class="table-header">
+
+
+
                         <td ng-if="name" style="position: relative">
                             Name
                             <div class="sort-filter">
                                 <a ng-click="sortDown('name')" class="triangleLeft cursorPointer"></a>
                                 <a ng-click="sortUp('name')" class="triangleRight cursorPointer"></a>
 
-                                <a ng-click="toggleFilterName()" class="fas fa-filter cursorPointer "
+                                <a ng-click="toggleFilter('name')" class="fas fa-filter cursorPointer "
                                    style="font-size: 12px; color: #caebfa"></a>
                             </div>
                             <div id="showFilterName" ng-show="!showFilterName">
@@ -167,13 +169,13 @@ ange="checkBoxStatus()" type="checkbox" ng-model="nameModal">
                                 <div class="inputWithIcon">
                                     <input id="inputNameFilter" type="text" ng-model="nameFilter.name">
                                     <i class="fas fa-filter"></i>
-                                    <a class="fas fa-times" ng-click="toggleFilterName()"></a>
+                                    <a class="fas fa-times" ng-click="toggleFilter('name')"></a>
                                 </div>
 
 
-                                <div id="filterName" >
+                                <div id="filterName">
 
-                                    <div  ng-repeat="student in filteredName = (students | filter: nameFilter) | unique: 'name'">
+                                    <div ng-repeat="student in filteredName = (students | filter: nameFilter) | unique: 'name'">
                                         <a class="cursorPointer" ng-click="getAllStudentByName(student.name)">{{student.name}}</a>
                                     </div>
 
@@ -193,7 +195,7 @@ ange="checkBoxStatus()" type="checkbox" ng-model="nameModal">
                                 <a ng-click="sortDown('age')" class="triangleLeft cursorPointer"></a>
                                 <a ng-click="sortUp('age')" class="triangleRight cursorPointer"></a>
 
-                                <a ng-click="toggleFilterAge()" class="fas fa-filter cursorPointer"
+                                <a ng-click="toggleFilter('age')" class="fas fa-filter cursorPointer"
                                    style="font-size: 12px; color: #caebfa"></a>
 
                             </div>
@@ -202,7 +204,7 @@ ange="checkBoxStatus()" type="checkbox" ng-model="nameModal">
                                 <div class="inputWithIcon">
                                     <input id="inputAgeFilter" type="text" ng-model="ageFilter.age">
                                     <i class="fas fa-filter"></i>
-                                    <a class="fas fa-times" ng-click="toggleFilterAge()"></a>
+                                    <a class="fas fa-times" ng-click="toggleFilter('age')"></a>
                                 </div>
 
                                 <div id="filterAge">
@@ -219,13 +221,13 @@ ange="checkBoxStatus()" type="checkbox" ng-model="nameModal">
 
                         </td>
 
-                        <td ng-if="gender" style="position: relative    ">
+                        <td ng-if="gender" style="position: relative">
                             Gender
                             <div class="sort-filter">
                                 <a ng-click="sortDown('gender')" class="triangleLeft cursorPointer"></a>
                                 <a ng-click="sortUp('gender')" class="triangleRight cursorPointer"></a>
 
-                                <a ng-click="toggleFilterGender()" class="fas fa-filter cursorPointer"
+                                <a ng-click="toggleFilter('gender')" class="fas fa-filter cursorPointer"
                                    style="font-size: 12px; color: #caebfa"></a>
 
                             </div>
@@ -234,7 +236,7 @@ ange="checkBoxStatus()" type="checkbox" ng-model="nameModal">
                                 <div class="inputWithIcon">
                                     <input id="inputGenderFilter" type="text" ng-model="genderFilter.gender">
                                     <i class="fas fa-filter"></i>
-                                    <a class="fas fa-times" ng-click="toggleFilterGender()"></a>
+                                    <a class="fas fa-times" ng-click="toggleFilter('gender')"></a>
                                 </div>
 
 
@@ -257,7 +259,7 @@ ange="checkBoxStatus()" type="checkbox" ng-model="nameModal">
                                 <a ng-click="sortDown('address')" class="triangleLeft cursorPointer"></a>
                                 <a ng-click="sortUp('address')" class="triangleRight cursorPointer"></a>
 
-                                <a ng-click="toggleFilterAddress()" class="fas fa-filter cursorPointer"
+                                <a ng-click="toggleFilter('address')" class="fas fa-filter cursorPointer"
                                    style="font-size: 12px; color: #caebfa"></a>
 
                             </div>
@@ -266,7 +268,7 @@ ange="checkBoxStatus()" type="checkbox" ng-model="nameModal">
                                 <div class="inputWithIcon">
                                     <input id="inputAddressFilter" type="text" ng-model="addressFilter.address">
                                     <i class="fas fa-filter"></i>
-                                    <a class="fas fa-times" ng-click="toggleFilterAddress()"></a>
+                                    <a class="fas fa-times" ng-click="toggleFilter('address')"></a>
                                 </div>
 
 
@@ -289,7 +291,7 @@ ange="checkBoxStatus()" type="checkbox" ng-model="nameModal">
                                 <a ng-click="sortDown('phoneNum')" class="triangleLeft cursorPointer"></a>
                                 <a ng-click="sortUp('phoneNum')" class="triangleRight cursorPointer"></a>
 
-                                <a ng-click="toggleFilterPhoneNum()" class="fas fa-filter cursorPointer"
+                                <a ng-click="toggleFilter('phoneNum')" class="fas fa-filter cursorPointer"
                                    style="font-size: 12px; color: #caebfa"></a>
 
                             </div>
@@ -298,7 +300,7 @@ ange="checkBoxStatus()" type="checkbox" ng-model="nameModal">
                                 <div class="inputWithIcon">
                                     <input id="inputPhoneFilter" type="text" ng-model="phoneFilter.phoneNum">
                                     <i class="fas fa-filter"></i>
-                                    <a class="fas fa-times" ng-click="toggleFilterPhoneNum()"></a>
+                                    <a class="fas fa-times" ng-click="toggleFilter('phoneNum')"></a>
                                 </div>
 
 
@@ -395,11 +397,10 @@ toggle between hiding and showing the dropdown content */
     };
 
 
-
-    (function($){
-        $(window).on("load",function(){
+    (function ($) {
+        $(window).on("load", function () {
             $("#filterName, #filterAge, #filterAddress, #filterGender, #filterPhone").mCustomScrollbar({
-                theme:"dark-3",
+                theme: "dark-3",
             });
         });
     })(jQuery);
