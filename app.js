@@ -1,6 +1,6 @@
-var myApp = angular.module('myApp',['ui']);
+var myApp = angular.module('myApp', ['ui']);
 
-myApp.controller('chartCtrl', ['$scope','$http', function ContactController($scope, $http) {
+myApp.controller('chartCtrl', ['$scope', '$http', function ContactController($scope, $http) {
 
 
     $scope.sortType = 'name'; // set the default sort type
@@ -13,18 +13,208 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
     //     console.log($scope.sortReverse)
     // };
 
-    $scope.sortDown = function (keyname) {
+    $scope.isSortDownName = false;
+    $scope.isSortDownAge = false;
+    $scope.isSortDownGender = false;
+    $scope.isSortDownAddress = false;
+    $scope.isSortDownPhoneNum = false;
+    $scope.isSortUpName = false;
+    $scope.isSortUpAge = false;
+    $scope.isSortUpGender = false;
+    $scope.isSortUpAddress = false;
+    $scope.isSortUpPhoneNum = false;
+
+    $scope.sortDownName = function (keyname) {
         $scope.sortReverse = true;
         $scope.sortType = keyname;
+
+        $scope.isSortDownName = true;
+
+        //when one sort is true, all other become false
+        $scope.isSortDownAge = false;
+        $scope.isSortDownGender = false;
+        $scope.isSortDownAddress = false;
+        $scope.isSortDownPhoneNum = false;
+        $scope.isSortUpName = false;
+        $scope.isSortUpAge = false;
+        $scope.isSortUpGender = false;
+        $scope.isSortUpAddress = false;
+        $scope.isSortUpPhoneNum = false;
     };
 
-    $scope.sortUp = function(keyname) {
+    $scope.sortUpName = function (keyname) {
         $scope.sortReverse = false;
         $scope.sortType = keyname;
+
+        $scope.isSortUpName = true;
+
+        $scope.isSortDownName = false;
+        $scope.isSortDownAge = false;
+        $scope.isSortDownGender = false;
+        $scope.isSortDownAddress = false;
+        $scope.isSortDownPhoneNum = false;
+        // $scope.isSortUpName = false;
+        $scope.isSortUpAge = false;
+        $scope.isSortUpGender = false;
+        $scope.isSortUpAddress = false;
+        $scope.isSortUpPhoneNum = false;
     };
 
-    
-    
+    //change color when click on sort age
+    $scope.sortDownAge = function (keyname) {
+        $scope.sortReverse = true;
+        $scope.sortType = keyname;
+
+        $scope.isSortDownAge = true;
+
+        //when one sort is true, all other become false
+        $scope.isSortDownName = false;
+        // $scope.isSortDownAge = false;
+        $scope.isSortDownGender = false;
+        $scope.isSortDownAddress = false;
+        $scope.isSortDownPhoneNum = false;
+        $scope.isSortUpName = false;
+        $scope.isSortUpAge = false;
+        $scope.isSortUpGender = false;
+        $scope.isSortUpAddress = false;
+        $scope.isSortUpPhoneNum = false;
+    };
+
+    $scope.sortUpAge = function (keyname) {
+        $scope.sortReverse = false;
+        $scope.sortType = keyname;
+
+        $scope.isSortUpAge = true;
+
+        $scope.isSortDownName = false;
+        $scope.isSortDownAge = false;
+        $scope.isSortDownGender = false;
+        $scope.isSortDownAddress = false;
+        $scope.isSortDownPhoneNum = false;
+        $scope.isSortUpName = false;
+        // $scope.isSortUpAge = false;
+        $scope.isSortUpGender = false;
+        $scope.isSortUpAddress = false;
+        $scope.isSortUpPhoneNum = false;
+    };
+
+    //change color button when click sort gender
+    $scope.sortDownGender = function (keyname) {
+        $scope.sortReverse = true;
+        $scope.sortType = keyname;
+
+        $scope.isSortDownGender = true;
+
+        //when one sort is true, all other become false
+        $scope.isSortDownName = false;
+        $scope.isSortDownAge = false;
+        // $scope.isSortDownGender = false;
+        $scope.isSortDownAddress = false;
+        $scope.isSortDownPhoneNum = false;
+        $scope.isSortUpName = false;
+        $scope.isSortUpAge = false;
+        $scope.isSortUpGender = false;
+        $scope.isSortUpAddress = false;
+        $scope.isSortUpPhoneNum = false;
+    };
+
+    $scope.sortUpGender = function (keyname) {
+        $scope.sortReverse = false;
+        $scope.sortType = keyname;
+
+        $scope.isSortUpGender = true;
+
+        $scope.isSortDownName = false;
+        $scope.isSortDownAge = false;
+        $scope.isSortDownGender = false;
+        $scope.isSortDownAddress = false;
+        $scope.isSortDownPhoneNum = false;
+        $scope.isSortUpName = false;
+        $scope.isSortUpAge = false;
+        // $scope.isSortUpGender = false;
+        $scope.isSortUpAddress = false;
+        $scope.isSortUpPhoneNum = false;
+    };
+
+    //change color button when click sort address
+
+    $scope.sortDownAddress = function (keyname) {
+        $scope.sortReverse = true;
+        $scope.sortType = keyname;
+
+        $scope.isSortDownAddress = true;
+
+        //when one sort is true, all other become false
+        $scope.isSortDownName = false;
+        $scope.isSortDownAge = false;
+        $scope.isSortDownGender = false;
+        // $scope.isSortDownAddress = false;
+        $scope.isSortDownPhoneNum = false;
+        $scope.isSortUpName = false;
+        $scope.isSortUpAge = false;
+        $scope.isSortUpGender = false;
+        $scope.isSortUpAddress = false;
+        $scope.isSortUpPhoneNum = false;
+    };
+
+    $scope.sortUpAddress = function (keyname) {
+        $scope.sortReverse = false;
+        $scope.sortType = keyname;
+
+        $scope.isSortUpAddress = true;
+
+        $scope.isSortDownName = false;
+        $scope.isSortDownAge = false;
+        $scope.isSortDownGender = false;
+        $scope.isSortDownAddress = false;
+        $scope.isSortDownPhoneNum = false;
+        $scope.isSortUpName = false;
+        $scope.isSortUpAge = false;
+        $scope.isSortUpGender = false;
+        // $scope.isSortUpAddress = false;
+        $scope.isSortUpPhoneNum = false;
+    };
+
+
+    //change color button when click sort phone
+
+    $scope.sortDownPhoneNum = function (keyname) {
+        $scope.sortReverse = true;
+        $scope.sortType = keyname;
+
+        $scope.isSortDownPhoneNum = true;
+
+        //when one sort is true, all other become false
+        $scope.isSortDownName = false;
+        $scope.isSortDownAge = false;
+        $scope.isSortDownGender = false;
+        $scope.isSortDownAddress = false;
+        // $scope.isSortDownPhoneNum = false;
+        $scope.isSortUpName = false;
+        $scope.isSortUpAge = false;
+        $scope.isSortUpGender = false;
+        $scope.isSortUpAddress = false;
+        $scope.isSortUpPhoneNum = false;
+    };
+
+    $scope.sortUpPhoneNum = function (keyname) {
+        $scope.sortReverse = false;
+        $scope.sortType = keyname;
+
+        $scope.isSortUpPhoneNum = true;
+
+        $scope.isSortDownName = false;
+        $scope.isSortDownAge = false;
+        $scope.isSortDownGender = false;
+        $scope.isSortDownAddress = false;
+        $scope.isSortDownPhoneNum = false;
+        $scope.isSortUpName = false;
+        $scope.isSortUpAge = false;
+        $scope.isSortUpGender = false;
+        $scope.isSortUpAddress = false;
+        // $scope.isSortUpPhoneNum = false;
+    };
+
 
     $scope.showFilterName = true;
     // $scope.toggleFilterName = function(){
@@ -50,8 +240,8 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
     // $scope.toggleFilterPhoneNum = function(){
     //     $scope.showFilterPhoneNum = !$scope.showFilterPhoneNum;
     // };
-    
-    $scope.toggleFilter = function(args) {
+
+    $scope.toggleFilter = function (args) {
         switch (args) {
             case 'name':
                 $scope.showFilterName = !$scope.showFilterName;
@@ -69,70 +259,67 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
                 $scope.showFilterPhoneNum = !$scope.showFilterPhoneNum;
                 break;
         }
-        
+
     }
 
     // calculate data and draw chart
-    $scope.calculateData = function(){
+    $scope.calculateData = function () {
 
         $http.get('students/students.json').then(function (response) {
             $scope.students = response.data;
-        
-        $scope.chartData = [];
-        // calculate data input for pie chat
-        let saigonPer, hanoiPer, haiduongPer, haiphongPer;
 
-        let saigonCount = 0;
-        let hanoiCount = 0;
-        let haiphongCount = 0;
-        let haiduongCount = 0;
+            $scope.chartData = [];
+            // calculate data input for pie chat
+            let saigonPer, hanoiPer, haiduongPer, haiphongPer;
 
-        let province = ['Hai duong', 'Hai phong', 'Ha noi', 'Sai gon'];
-        let provincePer = [];
+            let saigonCount = 0;
+            let hanoiCount = 0;
+            let haiphongCount = 0;
+            let haiduongCount = 0;
 
-
+            let province = ['Hai duong', 'Hai phong', 'Ha noi', 'Sai gon'];
+            let provincePer = [];
 
 
-        for (let i = 0; i < $scope.students.length; i++) {
-            switch ($scope.students[i].address) {
-                case 'Hai phong':
-                    haiphongCount++;
-                    break;
-                case 'Hai duong':
-                    haiduongCount++;
-                    break;
-                case 'Ha noi':
-                    hanoiCount++;
-                    break;
-                case 'Sai gon':
-                    saigonCount++;
+            for (let i = 0; i < $scope.students.length; i++) {
+                switch ($scope.students[i].address) {
+                    case 'Hai phong':
+                        haiphongCount++;
+                        break;
+                    case 'Hai duong':
+                        haiduongCount++;
+                        break;
+                    case 'Ha noi':
+                        hanoiCount++;
+                        break;
+                    case 'Sai gon':
+                        saigonCount++;
+                }
             }
-        }
 
-        haiduongPer = Math.round((haiduongCount / $scope.students.length) * 100);
-        // console.log(haiduongPer);
-        haiphongPer = Math.round((haiphongCount / $scope.students.length) * 100);
-        // console.log(haiphongPer);
-        hanoiPer = Math.round((hanoiCount / $scope.students.length) * 100);
-        // console.log(hanoiPer);
-        saigonPer = Math.round((saigonCount / $scope.students.length) * 100);
-        // console.log(saigonPer);
-        provincePer.push(haiduongPer);
-        provincePer.push(haiphongPer);
-        provincePer.push(hanoiPer);
-        provincePer.push(saigonPer);
-        // console.log(provincePer);
+            haiduongPer = Math.round((haiduongCount / $scope.students.length) * 100);
+            // console.log(haiduongPer);
+            haiphongPer = Math.round((haiphongCount / $scope.students.length) * 100);
+            // console.log(haiphongPer);
+            hanoiPer = Math.round((hanoiCount / $scope.students.length) * 100);
+            // console.log(hanoiPer);
+            saigonPer = Math.round((saigonCount / $scope.students.length) * 100);
+            // console.log(saigonPer);
+            provincePer.push(haiduongPer);
+            provincePer.push(haiphongPer);
+            provincePer.push(hanoiPer);
+            provincePer.push(saigonPer);
+            // console.log(provincePer);
 
-        for (let j = 0; j < province.length; j++) {
-            $scope.chartData.push([province[j], provincePer[j]])
-        }
+            for (let j = 0; j < province.length; j++) {
+                $scope.chartData.push([province[j], provincePer[j]])
+            }
 
             $scope.drawChart($scope.chartData);
             $scope.studentsData = $scope.students;
 
-    });
+        });
     };
-
 
 
     $scope.name = true;
@@ -152,7 +339,7 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
         $scope.name = $scope.nameModal;
         $scope.age = $scope.ageModal;
         $scope.gender = $scope.genderModal;
-        $scope.address =  $scope.addressModal;
+        $scope.address = $scope.addressModal;
         $scope.phoneNum = $scope.phoneNumModal;
         if ($scope.checkAllModal) {
             $scope.name = true;
@@ -163,13 +350,13 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
         }
     };
 
-    $scope.initCollumn = function(){
+    $scope.initCollumn = function () {
         $scope.nameModal = $scope.name;
         $scope.ageModal = $scope.age;
         $scope.genderModal = $scope.gender;
         $scope.addressModal = $scope.address;
         $scope.phoneNumModal = $scope.phoneNum;
-        if ($scope.nameModal === true && $scope.ageModal===true && $scope.genderModal===true && $scope.addressModal===true && $scope.phoneNumModal===true ) {
+        if ($scope.nameModal === true && $scope.ageModal === true && $scope.genderModal === true && $scope.addressModal === true && $scope.phoneNumModal === true) {
             $scope.checkAllModal = true;
         }
     };
@@ -319,7 +506,7 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
 
     //get filter result when click on filter
     $scope.getAllStudentByName = function (name) {
-        let filter=[];
+        let filter = [];
         for (let i = 0; i < $scope.students.length; i++) {
             if (name === $scope.students[i].name) {
                 filter.push($scope.students[i])
@@ -331,7 +518,7 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
     }
 
     $scope.getAllStudentByAge = function (age) {
-        let filter=[];
+        let filter = [];
         for (let i = 0; i < $scope.students.length; i++) {
             if (age === $scope.students[i].age) {
                 filter.push($scope.students[i])
@@ -343,7 +530,7 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
     }
 
     $scope.getAllStudentByGender = function (gender) {
-        let filter=[];
+        let filter = [];
         for (let i = 0; i < $scope.students.length; i++) {
             if (gender === $scope.students[i].gender) {
                 filter.push($scope.students[i])
@@ -355,7 +542,7 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
     }
 
     $scope.getAllStudentByAddress = function (address) {
-        let filter=[];
+        let filter = [];
         for (let i = 0; i < $scope.students.length; i++) {
             if (address === $scope.students[i].address) {
                 filter.push($scope.students[i])
@@ -367,7 +554,7 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
     }
 
     $scope.getAllStudentByPhoneNum = function (phone) {
-        let filter=[];
+        let filter = [];
         for (let i = 0; i < $scope.students.length; i++) {
             if (phone === $scope.students[i].phoneNum) {
                 filter.push($scope.students[i])
@@ -386,8 +573,7 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
             $scope.genderModal = true;
             $scope.addressModal = true;
             $scope.phoneNumModal = true;
-        }
-        else {
+        } else {
             $scope.nameModal = false;
             $scope.ageModal = false;
             $scope.genderModal = false;
@@ -397,10 +583,10 @@ myApp.controller('chartCtrl', ['$scope','$http', function ContactController($sco
     }
 
     $scope.checkBoxStatus = function () {
-        if ($scope.nameModal === true && $scope.ageModal===true && $scope.genderModal===true && $scope.addressModal===true && $scope.phoneNumModal===true ) {
+        if ($scope.nameModal === true && $scope.ageModal === true && $scope.genderModal === true && $scope.addressModal === true && $scope.phoneNumModal === true) {
             $scope.checkAllModal = true;
         }
-        if ($scope.nameModal === false || $scope.ageModal===false || $scope.genderModal===false || $scope.addressModal===false || $scope.phoneNumModal===false) {
+        if ($scope.nameModal === false || $scope.ageModal === false || $scope.genderModal === false || $scope.addressModal === false || $scope.phoneNumModal === false) {
             $scope.checkAllModal = false;
         }
     }
