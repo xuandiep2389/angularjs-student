@@ -366,3 +366,8 @@ body {
 input:focus{
     outline: none;
 }
+
+.fa-filter {
+    font-size: 12px;
+    color: #caebfa !important;
+}
