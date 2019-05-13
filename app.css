@@ -37,6 +37,10 @@ body {
     color: gray;
 }
 
+.filterResult:hover {
+    background-color: #99d9ea;
+}
+
 #showFilterName, #showFilterAge, #showFilterAddress, #showFilterGender, #showFilterPhone {
     position: absolute;
     width: 90%;

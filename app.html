@@ -173,13 +173,14 @@
                                 </div>
 
 
-                                <div id="filterName">
+                                <div  id="filterName">
 
-                                    <div ng-repeat="student in filteredName = (students | filter: nameFilter) | unique: 'name'">
+                                    <div class="filterResult" ng-repeat="student in filteredName = (students | filter: nameFilter) | unique: 'name'">
                                         <a class="cursorPointer" ng-click="getAllStudentByName(student.name)">{{student.name}}</a>
                                     </div>
 
                                 </div>
+
                                 <div align="center">
                                     <button class="filterOk" ng-click="changeStudentsDataName(filteredName)">OK
                                     </button>
@@ -208,7 +209,7 @@
                                 </div>
 
                                 <div id="filterAge">
-                                    <div ng-repeat="student in filteredAge = (students | filter: ageFilter) | unique: 'age'">
+                                    <div class="filterResult" ng-repeat="student in filteredAge = (students | filter: ageFilter) | unique: 'age'">
                                         <a class="cursorPointer" ng-click="getAllStudentByAge(student.age)">{{student.age}}</a>
                                     </div>
                                 </div>
@@ -241,7 +242,7 @@
 
 
                                 <div id="filterGender">
-                                    <div ng-repeat="student in filteredGender = (students | filter: genderFilter) | unique: 'gender'">
+                                    <div class="filterResult" ng-repeat="student in filteredGender = (students | filter: genderFilter) | unique: 'gender'">
                                         <a class="cursorPointer" ng-click="getAllStudentByGender(student.gender)">{{student.gender}}</a>
                                     </div>
                                 </div>
@@ -273,7 +274,7 @@
 
 
                                 <div id="filterAddress">
-                                    <div ng-repeat="student in filteredAddress = (students | filter: addressFilter) | unique: 'address'">
+                                    <div class="filterResult" ng-repeat="student in filteredAddress = (students | filter: addressFilter) | unique: 'address'">
                                         <a class="cursorPointer" ng-click="getAllStudentByAddress(student.address)">{{student.address}}</a>
                                     </div>
                                 </div>
@@ -305,7 +306,7 @@
 
 
                                 <div id="filterPhone">
-                                    <div ng-repeat="student in filteredPhoneNum = (students | filter: phoneFilter) | unique: 'phoneNum'">
+                                    <div class="filterResult" ng-repeat="student in filteredPhoneNum = (students | filter: phoneFilter) | unique: 'phoneNum'">
                                         <a class="cursorPointer" ng-click="getAllStudentByPhoneNum(student.phoneNum)">{{student.phoneNum}}</a>
                                     </div>
                                 </div>
