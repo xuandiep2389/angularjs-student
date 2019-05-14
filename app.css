@@ -371,3 +371,7 @@ input:focus{
     font-size: 12px;
     color: #caebfa !important;
 }
+
+.filterBolder {
+    color: #3bb1ec !important;
+}

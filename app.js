@@ -216,27 +216,27 @@ myApp.controller('chartCtrl', ['$scope', '$http', function ContactController($sc
     };
 
 
-    $scope.showFilterName = true;
+    $scope.showFilterName = false;
     // $scope.toggleFilterName = function(){
     //     $scope.showFilterName = !$scope.showFilterName;
     // };
 
-    $scope.showFilterAge = true;
+    $scope.showFilterAge = false;
     // $scope.toggleFilterAge = function(){
     //     $scope.showFilterAge = !$scope.showFilterAge;
     // };
 
-    $scope.showFilterGender = true;
+    $scope.showFilterGender = false;
     // $scope.toggleFilterGender = function(){
     //     $scope.showFilterGender = !$scope.showFilterGender;
     // };
 
-    $scope.showFilterAddress = true;
+    $scope.showFilterAddress = false;
     // $scope.toggleFilterAddress = function(){
     //     $scope.showFilterAddress = !$scope.showFilterAddress;
     // };
 
-    $scope.showFilterPhoneNum = true;
+    $scope.showFilterPhoneNum = false;
     // $scope.toggleFilterPhoneNum = function(){
     //     $scope.showFilterPhoneNum = !$scope.showFilterPhoneNum;
     // };

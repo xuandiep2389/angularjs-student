@@ -161,9 +161,9 @@
                                 <a ng-click="sortDownName('name')" ng-class="isSortDownName? 'triangleLeftBolder cursorPointer': 'triangleLeft cursorPointer'"></a>
                                 <a ng-click="sortUpName('name')" ng-class="isSortUpName? 'triangleRightBolder cursorPointer' : 'triangleRight cursorPointer'"></a>
 
-                                <a ng-click="toggleFilter('name')" class="fas fa-filter cursorPointer"></a>
+                                <a ng-click="toggleFilter('name')" ng-class="showFilterName? 'fas fa-filter cursorPointer filterBolder': 'fas fa-filter cursorPointer'"></a>
                             </div>
-                            <div id="showFilterName" ng-show="!showFilterName">
+                            <div id="showFilterName" ng-show="showFilterName">
 
                                 <div class="inputWithIcon">
                                     <input id="inputNameFilter" type="text" ng-model="nameFilter.name">
@@ -195,10 +195,10 @@
                                 <a ng-click="sortDownAge('age')" ng-class="isSortDownAge? 'triangleLeftBolder cursorPointer': 'triangleLeft cursorPointer'"></a>
                                 <a ng-click="sortUpAge('age')" ng-class="isSortUpAge? 'triangleRightBolder cursorPointer' : 'triangleRight cursorPointer'"></a>
 
-                                <a ng-click="toggleFilter('age')" class="fas fa-filter cursorPointer"></a>
+                                <a ng-click="toggleFilter('age')" ng-class="showFilterAge? 'fas fa-filter cursorPointer filterBolder': 'fas fa-filter cursorPointer'"></a>
 
                             </div>
-                            <div id="showFilterAge" ng-show="!showFilterAge">
+                            <div id="showFilterAge" ng-show="showFilterAge">
 
                                 <div class="inputWithIcon">
                                     <input id="inputAgeFilter" type="text" ng-model="ageFilter.age">
@@ -226,10 +226,10 @@
                                 <a ng-click="sortDownGender('gender')" ng-class="isSortDownGender? 'triangleLeftBolder cursorPointer': 'triangleLeft cursorPointer'"></a>
                                 <a ng-click="sortUpGender('gender')" ng-class="isSortUpGender? 'triangleRightBolder cursorPointer' : 'triangleRight cursorPointer'"></a>
 
-                                <a ng-click="toggleFilter('gender')" class="fas fa-filter cursorPointer"></a>
+                                <a ng-click="toggleFilter('gender')" ng-class="showFilterGender? 'fas fa-filter cursorPointer filterBolder': 'fas fa-filter cursorPointer'"></a>
 
                             </div>
-                            <div id="showFilterGender" ng-show="!showFilterGender">
+                            <div id="showFilterGender" ng-show="showFilterGender">
 
                                 <div class="inputWithIcon">
                                     <input id="inputGenderFilter" type="text" ng-model="genderFilter.gender">
@@ -257,10 +257,10 @@
                                 <a ng-click="sortDownAddress('address')" ng-class="isSortDownAddress? 'triangleLeftBolder cursorPointer': 'triangleLeft cursorPointer'"></a>
                                 <a ng-click="sortUpAddress('address')" ng-class="isSortUpAddress? 'triangleRightBolder cursorPointer' : 'triangleRight cursorPointer'"></a>
 
-                                <a ng-click="toggleFilter('address')" class="fas fa-filter cursorPointer"></a>
+                                <a ng-click="toggleFilter('address')" ng-class="showFilterAddress? 'fas fa-filter cursorPointer filterBolder': 'fas fa-filter cursorPointer'"></a>
 
                             </div>
-                            <div id="showFilterAddress" ng-show="!showFilterAddress">
+                            <div id="showFilterAddress" ng-show="showFilterAddress">
 
                                 <div class="inputWithIcon">
                                     <input id="inputAddressFilter" type="text" ng-model="addressFilter.address">
@@ -288,10 +288,10 @@
                                 <a ng-click="sortDownPhoneNum('phoneNum')" ng-class="isSortDownPhoneNum? 'triangleLeftBolder cursorPointer': 'triangleLeft cursorPointer'"></a>
                                 <a ng-click="sortUpPhoneNum('phoneNum')" ng-class="isSortUpPhoneNum? 'triangleRightBolder cursorPointer' : 'triangleRight cursorPointer'"></a>
 
-                                <a ng-click="toggleFilter('phoneNum')" class="fas fa-filter cursorPointer"></a>
+                                <a ng-click="toggleFilter('phoneNum')" ng-class="showFilterPhoneNum? 'fas fa-filter cursorPointer filterBolder': 'fas fa-filter cursorPointer'"></a>
 
                             </div>
-                            <div id="showFilterPhone" ng-show="!showFilterPhoneNum">
+                            <div id="showFilterPhone" ng-show="showFilterPhoneNum">
 
                                 <div class="inputWithIcon">
                                     <input id="inputPhoneFilter" type="text" ng-model="phoneFilter.phoneNum">
