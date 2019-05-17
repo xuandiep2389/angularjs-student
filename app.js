@@ -265,7 +265,7 @@ myApp.controller('chartCtrl', ['$scope', '$http', function ContactController($sc
     // calculate data and draw chart
     $scope.calculateData = function () {
 
-        $http.get('students/students.json').then(function (response) {
+        $http.get('http://localhost:8080/students').then(function (response) {
             $scope.students = response.data;
 
             $scope.chartData = [];
