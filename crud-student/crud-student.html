@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="crud">
+<head>
+    <meta charset="UTF-8">
+    <title>crud student</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+    <link rel="stylesheet" href="crud-student.css">
+    <script src="crud-student.js"></script>
+</head>
+<body>
+
+<div ng-controller="CRUDCtrl">
+    <table>
+        <tr>
+            <td width="100">ID:</td>
+            <td><input type="text" id="id" ng-model="student.id"/></td>
+        </tr>
+        <tr>
+            <td width="100">Name:</td>
+            <td><input type="text" id="name" ng-model="student.name"/></td>
+        </tr>
+        <tr>
+            <td width="100">Age:</td>
+            <td><input type="text" id="age" ng-model="student.age"/></td>
+        </tr>
+        <tr>
+            <td width="100">Gender:</td>
+            <td><input type="text" id="gender" ng-model="student.gender"/></td>
+        </tr>
+        <tr>
+            <td width="100">Address:</td>
+            <td><input type="text" id="address" ng-model="student.address"/></td>
+        </tr>
+        <tr>
+            <td width="100">Phone number:</td>
+            <td><input type="text" id="phone" ng-model="student.phoneNum"/></td>
+        </tr>
+    </table>
+    <br/> <br/>
+    <a ng-click="getStudent(student.id)">Get Student</a>
+    <a ng-click="updateStudent(student.id,student.name,student.age,student.gender,student.address,student.phoneNum)">Update Student</a>
+    <a ng-click="addStudent(student.name,student.age,student.gender,student.address,student.phoneNum)">Add Student</a>
+    <a ng-click="deleteStudent(student.id)">Delete Student</a>
+
+    <br/> <br/>
+    <p style="color: green">{{message}}</p>
+    <p style="color: red">{{errorMessage}}</p>
+
+    <br/>
+    <br/>
+    <a ng-click="getAllStudents()">Get all Students</a><br/>
+    <br/> <br/>
+    <div ng-repeat="student in students">
+      {{student.id}}  {{student.name}} {{student.age}} {{student.gender}} {{student.address}} {{student.phoneNum}}
+    </div>
+</div>
+
+</body>
+</html>
