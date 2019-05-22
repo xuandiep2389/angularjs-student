@@ -1,0 +1,381 @@
+body {
+    min-height: 95vh;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.row{
+    min-height: 98vh;
+}
+
+.dot {
+    height: 20px;
+    width: 20px;
+    background-color: #005f9e;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#vertical-para {
+    transform: rotate(270deg);
+    text-align: center;
+    position: relative;
+    top: 50%;
+}
+
+#para {
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 20px;
+}
+
+.table-body:nth-child(2n) {
+    background-color: #edf6f9;
+}
+
+#filterName, #filterAge, #filterGender, #filterAddress, #filterPhone {
+    max-height: 100px;
+    overflow-y: auto;
+    padding-left: 10px;
+    color: gray;
+}
+
+.filterResult:hover {
+    background-color: #99d9ea;
+}
+
+#showFilterName, #showFilterAge, #showFilterAddress, #showFilterGender, #showFilterPhone {
+    position: absolute;
+    width: 90%;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: 2px gray;
+}
+
+#inputNameFilter, #inputAgeFilter, #inputGenderFilter, #inputAddressFilter, #inputPhoneFilter {
+    width: 100%;
+}
+
+.filterOk {
+    background-color: #17c076;
+    color: white;
+    /*padding: 16px;*/
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/*dropdown on table*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 200px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #99d9ea;}
+
+.show {display: block;}
+
+
+
+/*.dropdown-content {*/
+    /*display: none;*/
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*background-color: #f9f9f9;*/
+    /*min-width: 160px;*/
+    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+    /*z-index: 1;*/
+    /*width: 200px;*/
+    /*cursor: pointer;*/
+    /*padding: 12px;*/
+/*}*/
+
+/*.dropdown-content a {*/
+    /*color: black;*/
+    /*padding: 12px 16px;*/
+    /*text-decoration: none;*/
+    /*display: block;*/
+/*}*/
+
+/*.dropdown-content a:hover {*/
+    /*background-color: #99d9ea;*/
+/*}*/
+
+/*.dropdown:hover .dropdown-content {*/
+    /*display: block;*/
+/*}*/
+
+/*.dropdown:hover .dropbtn {*/
+/*background-color: #3e8e41;*/
+/*}*/
+
+#dropdown-menu {
+    cursor: pointer;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+#rightCont {
+    border-top: 2px solid gray;
+    border-right: 2px solid gray;
+    --padding: 20px; padding: var(--padding);
+    box-shadow: inset 0 0 0 var(--padding) #e5e5e5;
+}
+
+#leftCont {
+    border-left: 2px solid gray;
+    border-right: 2px solid gray;
+    border-top: 2px solid gray;
+    -moz-box-shadow: inset 0 0 3px #000000;
+    -webkit-box-shadow: inset 0 0 3px #000000;
+    box-shadow: inset 0 0 3px #000000;
+}
+
+#smallLeftCont {
+    border-left: 2px solid gray;
+    border-right: 2px solid gray;
+    border-top: 2px solid gray;
+    -moz-box-shadow: inset 0 0 3px #000000;
+    -webkit-box-shadow: inset 0 0 3px #000000;
+    box-shadow: inset 0 0 3px #000000;
+}
+
+#tableDiv {
+    --padding1: 10px; padding: var(--padding1);
+    box-shadow: inset 0 0 0 var(--padding1) white;
+}
+
+.table-header {
+    border-bottom: 2px solid #97adbb;
+}
+
+.nav-dot {
+}
+
+.name-nav {
+    position: absolute;
+    left: 45px;
+    top: 7px;
+}
+
+.three-dot-menu {
+}
+
+.triangleLeft{
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 10px;
+    height: 10px;
+    border-bottom: solid 6px #caebfa;
+    border-right: solid 6px #caebfa;
+    border-left: solid 6px transparent;
+    border-top: solid 6px transparent;
+}
+
+.triangleLeftBolder{
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 10px;
+    height: 10px;
+    border-bottom: solid 6px #3bb1ec;
+    border-right: solid 6px #3bb1ec;
+    border-left: solid 6px transparent;
+    border-top: solid 6px transparent;
+}
+
+.triangleRight{
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 10px;
+    height: 10px;
+    border-bottom: solid 6px transparent ;
+    border-right: solid 6px transparent;
+    border-left: solid 6px #caebfa;
+    border-top: solid 6px #caebfa;
+}
+
+.triangleRightBolder{
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 10px;
+    height: 10px;
+    border-bottom: solid 6px transparent ;
+    border-right: solid 6px transparent;
+    border-left: solid 6px #3bb1ec;
+    border-top: solid 6px #3bb1ec;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+.mr-auto {
+    margin-right: auto !important;
+}
+
+.sort-filter{
+    position: absolute;
+    display: inline-block;
+    right: 0;
+}
+
+
+/*style checkbox*/
+/* The container */
+/* Customize the label (the container) */
+.container-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container-checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-checkbox input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-checkbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/*style the modal*/
+.modal-tall .modal-dialog {
+    height: 96%;
+}
+.modal-tall .modal-content {
+    height: 100%;
+}
+
+.modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color: #000;background-color: rgba(0,0,0,0.75);margin-right: 0px;}
+.mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.1); margin-right: 0px }
+
+
+.inputWithIcon input {
+    padding-left: 23px;
+    background-color:  #005f9e;
+    color: white;
+    border: 0px;
+}
+
+.inputWithIcon{
+    position: relative;
+
+}
+.inputWithIcon i {
+    position: absolute;
+    left: 5px;
+    top: 6px;
+    color: white;
+    font-size: 13px;
+}
+
+.inputWithIcon a {
+    position: absolute;
+    right: 8px;
+    top: 6px;
+    cursor: pointer;
+}
+
+input:focus{
+    outline: none;
+}
+
+.fa-filter {
+    font-size: 12px;
+    color: #caebfa !important;
+}
+
+.filterBolder {
+    color: #3bb1ec !important;
+}
