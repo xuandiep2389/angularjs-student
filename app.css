@@ -2,6 +2,10 @@ body {
     min-height: 95vh;
 }
 
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
 .row{
     min-height: 98vh;
 }

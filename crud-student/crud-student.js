@@ -23,7 +23,7 @@ app.controller('CRUDCtrl', ['$scope','CRUDService', function ($scope,CRUDService
                     $scope.message='';
                     $scope.errorMessage = '';
                 },
-                function error (response ){
+                function error(response ){
                     $scope.message = '';
                     if (response.status === 404){
                         $scope.errorMessage = 'Student not found!';
@@ -72,7 +72,7 @@ app.controller('CRUDCtrl', ['$scope','CRUDService', function ($scope,CRUDService
                     $scope.message='';
                     $scope.errorMessage = '';
                 },
-                function error (response ){
+                function error(response ){
                     $scope.message='';
                     $scope.errorMessage = 'Error getting students!';
                 });

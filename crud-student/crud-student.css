@@ -1,4 +1,10 @@
-a {
-    cursor: pointer;
-    background-color: lightblue;
+button {
+    cursor: pointer
+}
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+label {
+    font-weight: bolder;
 }
